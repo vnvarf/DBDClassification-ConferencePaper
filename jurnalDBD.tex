@@ -2,7 +2,7 @@
 \IEEEoverridecommandlockouts
 
 % =====================================================
-% PACKAGE
+% PACKAGES
 % =====================================================
 
 \usepackage{cite}
@@ -12,6 +12,12 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{array}
+\usepackage{float}
+
+% =====================================================
+% DOCUMENT
+% =====================================================
 
 \begin{document}
 
@@ -20,7 +26,7 @@
 % =====================================================
 
 \title{
-tittle
+Comparative Analysis of Normalization and Cross-Validation Scenarios for Deep Learning-Based Dengue Fever Classification
 }
 
 % =====================================================
@@ -39,6 +45,10 @@ Ramadhanivanva@student.telkomuniversity.ac.id
 
 }
 
+% =====================================================
+% TITLE AREA
+% =====================================================
+
 \maketitle
 
 % =====================================================
@@ -47,6 +57,7 @@ Ramadhanivanva@student.telkomuniversity.ac.id
 
 \begin{abstract}
 
+% Fill abstract here
 
 \end{abstract}
 
@@ -64,17 +75,21 @@ Deep Learning, Dengue Fever, Artificial Neural Network, Classification, Normaliz
 
 \section{Introduction}
 
-Dengue Fever is one of the major infectious diseases in tropical countries and remains a serious public health concern. Early classification of Dengue Fever is essential to reduce mortality and improve patient treatment. Conventional diagnosis generally relies on clinical symptoms and laboratory examinations, which may require additional time and expert interpretation.
+Dengue Fever is one of the most significant mosquito-borne infectious diseases in tropical and subtropical countries. According to the \textit{World Health Organization (WHO)}, the global incidence of Dengue has increased rapidly over the past decades, particularly in Southeast Asia and other tropical regions. Early detection and classification of Dengue Fever are essential to reduce mortality rates and improve clinical treatment effectiveness \cite{b1}.
 
-Recent developments in Artificial Intelligence and Deep Learning have shown promising performance in healthcare classification systems. Artificial Neural Network (ANN) models are capable of learning complex non-linear relationships within medical datasets.
+Conventional diagnosis of Dengue Fever generally relies on clinical symptoms and laboratory examinations performed by healthcare professionals. Common symptoms include fever, headache, nausea, muscle pain, and skin rash, while laboratory indicators such as platelet count, hematocrit, leukocyte count, and hemoglobin level are often used to support diagnosis. However, manual interpretation of clinical data may require considerable time and may be affected by human error, especially when the number of patients increases significantly \cite{b2}.
 
-Several studies have applied Machine Learning approaches for Dengue Fever prediction. However, limited studies comprehensively analyze the influence of normalization techniques and cross-validation scenarios on Deep Learning performance.
+Recent developments in Artificial Intelligence (AI) and Deep Learning have demonstrated promising performance in medical classification and prediction systems. Deep Learning models are capable of learning complex non-linear relationships from medical datasets and have been widely applied in disease diagnosis, image classification, and healthcare decision support systems \cite{b3}. Among various Deep Learning approaches, Artificial Neural Network (ANN) models have shown good capability in binary classification problems due to their ability to capture hidden patterns within clinical datasets \cite{b4}.
 
-Therefore, this study proposes a comparative analysis of normalization techniques and cross-validation scenarios for Deep Learning-based Dengue Fever classification using clinical symptom and laboratory datasets.
+Several previous studies have implemented Machine Learning and Deep Learning techniques for Dengue prediction and classification. However, many studies mainly focus on model performance without comprehensively analyzing the influence of preprocessing techniques such as data normalization and validation strategies. In fact, normalization techniques can significantly affect Deep Learning performance because numerical feature scales may influence the convergence process during model training \cite{b5}. Furthermore, Cross Validation is important to evaluate model stability and generalization capability in healthcare datasets \cite{b6}.
+
+Therefore, this study proposes a Deep Learning-based Dengue Fever classification system using clinical symptom and laboratory examination datasets. This research focuses on comparative analysis of normalization techniques and Cross Validation scenarios to determine the optimal classification performance. Two dataset scenarios were evaluated, including a full dataset consisting of symptom and laboratory features, and a symptom-only dataset. Three normalization methods were implemented, namely without normalization, StandardScaler, and MinMaxScaler, resulting in six experimental scenarios. In addition, K-Fold Cross Validation was applied to evaluate the robustness and stability of the proposed model.
+
+The results of this study are expected to contribute to the development of healthcare decision support systems and provide insights regarding the influence of preprocessing techniques on Deep Learning-based medical classification systems.
 
 \subsection{Research Contributions}
 
-The contributions of this study are as follows:
+The main contributions of this study are summarized as follows:
 
 \begin{itemize}
 
@@ -82,9 +97,19 @@ The contributions of this study are as follows:
 
 \item Comparative analysis between full dataset and symptom-only dataset.
 
-\item Evaluation of ANN model stability using K-Fold Cross Validation.
+\item Evaluation of model stability using K-Fold Cross Validation.
 
-\item Development of Deep Learning classification model for healthcare decision support systems.
+\item Development of a Deep Learning-based healthcare classification system.
+
+\item Investigation of the influence of clinical symptoms and laboratory examination features on classification performance.
+
+\item Evaluation of the effectiveness of StandardScaler and MinMaxScaler normalization techniques in improving Deep Learning performance.
+
+\item Analysis of model generalization capability through multiple cross-validation scenarios.
+
+\item Identification of the best experimental scenario based on classification performance metrics including Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+
+\item Development of an experimental framework that can be applied to other healthcare classification problems using Deep Learning approaches.
 
 \end{itemize}
 
@@ -94,12 +119,12 @@ The contributions of this study are as follows:
 
 \section{Related Work}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Summary of Related Studies}
-\begin{center}
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
-Study & Method & Accuracy \\
+\textbf{Study} & \textbf{Method} & \textbf{Accuracy} \\
 \hline
 Study A & ANN & 92\% \\
 \hline
@@ -109,11 +134,10 @@ Study C & Random Forest & 89\% \\
 \hline
 \end{tabular}
 \label{tab_related}
-\end{center}
 \end{table}
 
 % =====================================================
-% METHODOLOGY
+% RESEARCH METHODOLOGY
 % =====================================================
 
 \section{Research Methodology}
@@ -122,8 +146,11 @@ Study C & Random Forest & 89\% \\
 % WORKFLOW
 % =====================================================
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{workflow.png}}
+\subsection{Research Workflow}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{workflow.png}
 \caption{Research Workflow}
 \label{fig_workflow}
 \end{figure}
@@ -134,29 +161,23 @@ Study C & Random Forest & 89\% \\
 
 \subsection{Dataset}
 
-The dataset used in this study consists of:
-\begin{itemize}
+The dataset used in this study consists of clinical symptom and laboratory examination data.
 
-\item 9 symptom features
-
-\item 4 laboratory features
-
-\end{itemize}
-
-\begin{table}[htbp]
-\caption{Dataset Features}
-\begin{center}
+\begin{table}[H]
+\caption{Dataset Attribute Categories}
+\centering
 \begin{tabular}{|c|c|}
 \hline
-Category & Number of Features \\
+\textbf{Category} & \textbf{Number of Features} \\
 \hline
 Symptoms & 9 \\
 \hline
-Laboratory & 4 \\
+Laboratory Features & 4 \\
+\hline
+Total Features & 13 \\
 \hline
 \end{tabular}
 \label{tab_dataset}
-\end{center}
 \end{table}
 
 % =====================================================
@@ -165,20 +186,21 @@ Laboratory & 4 \\
 
 \subsection{Dataset Scenarios}
 
-\begin{table}[htbp]
+Two dataset scenarios were evaluated in this study.
+
+\begin{table}[H]
 \caption{Dataset Scenarios}
-\begin{center}
-\begin{tabular}{|c|c|}
+\centering
+\begin{tabular}{|c|m{5cm}|}
 \hline
-Scenario & Dataset Composition \\
+\textbf{Scenario} & \textbf{Dataset Composition} \\
 \hline
 Scenario 1 & Symptoms + Laboratory Features \\
 \hline
-Scenario 2 & Symptoms Only \\
+Scenario 2 & Symptoms Features Only \\
 \hline
 \end{tabular}
 \label{tab_scenario}
-\end{center}
 \end{table}
 
 % =====================================================
@@ -188,15 +210,16 @@ Scenario 2 & Symptoms Only \\
 \subsection{Data Preprocessing}
 
 The preprocessing stage includes:
+
 \begin{itemize}
 
-\item Data cleaning
+\item Data Cleaning
 
-\item Missing value handling
+\item Missing Value Handling
 
-\item Feature encoding
+\item Feature Encoding
 
-\item Data normalization
+\item Data Normalization
 
 \end{itemize}
 
@@ -207,6 +230,7 @@ The preprocessing stage includes:
 \subsection{Normalization Experiments}
 
 Three normalization methods were evaluated:
+
 \begin{itemize}
 
 \item Without Normalization
@@ -217,12 +241,12 @@ Three normalization methods were evaluated:
 
 \end{itemize}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Normalization Experiment Scenarios}
-\begin{center}
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
-Experiment & Dataset & Normalization \\
+\textbf{Experiment} & \textbf{Dataset} & \textbf{Normalization} \\
 \hline
 Exp-1 & Full Dataset & None \\
 \hline
@@ -238,39 +262,38 @@ Exp-6 & Symptoms Only & MinMaxScaler \\
 \hline
 \end{tabular}
 \label{tab_norm}
-\end{center}
 \end{table}
 
 % =====================================================
-% MODEL
+% DEEP LEARNING MODEL
 % =====================================================
 
-\subsection{Proposed ANN Model}
+\subsection{Proposed Deep Learning Model}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{ANN Architecture}
-\begin{center}
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
-Layer & Neurons & Activation \\
+\textbf{Layer} & \textbf{Neurons} & \textbf{Activation} \\
 \hline
-Input & 13 & - \\
+Input Layer & 13 & - \\
 \hline
-Dense 1 & 64 & ReLU \\
+Dense Layer 1 & 64 & ReLU \\
 \hline
-Dropout & - & - \\
+Dropout Layer & - & - \\
 \hline
-Dense 2 & 32 & ReLU \\
+Dense Layer 2 & 32 & ReLU \\
 \hline
-Output & 1 & Sigmoid \\
+Output Layer & 1 & Sigmoid \\
 \hline
 \end{tabular}
 \label{tab_model}
-\end{center}
 \end{table}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{deeplearning_architecture.png}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.47\textwidth]{deeplearning_architecture.png}
 \caption{Artificial Neural Network Architecture}
 \label{fig_ann}
 \end{figure}
@@ -283,12 +306,12 @@ Output & 1 & Sigmoid \\
 
 K-Fold Cross Validation with K=5 was implemented to evaluate model stability and generalization capability.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Cross Validation Scenarios}
-\begin{center}
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
-Scenario & Dataset & Normalization \\
+\textbf{Scenario} & \textbf{Dataset} & \textbf{Normalization} \\
 \hline
 CV-1 & Full Dataset & None \\
 \hline
@@ -304,7 +327,6 @@ CV-6 & Symptoms Only & MinMaxScaler \\
 \hline
 \end{tabular}
 \label{tab_cv_scenario}
-\end{center}
 \end{table}
 
 % =====================================================
@@ -330,24 +352,25 @@ The evaluation metrics used in this study include:
 \end{itemize}
 
 % =====================================================
-% RESULTS
+% RESULTS AND DISCUSSION
 % =====================================================
 
 \section{Results and Discussion}
 
 % =====================================================
-% TRAINING RESULT
+% TRAINING PERFORMANCE
 % =====================================================
 
 \subsection{Training Performance}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{training acc&loss.png}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{training acc&loss.png}
 \caption{Training Accuracy and Loss}
-\label{fig_train}
+\label{fig_training}
 \end{figure}
 
-The training results demonstrate stable convergence between training and validation processes. The model successfully minimized classification error during training.
+% Discussion about convergence and model learning
 
 % =====================================================
 % NORMALIZATION RESULT
@@ -355,12 +378,12 @@ The training results demonstrate stable convergence between training and validat
 
 \subsection{Normalization Experiment Results}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Experimental Results}
-\begin{center}
+\centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-Experiment & Accuracy & Precision & Recall & F1 \\
+\textbf{Experiment} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 \hline
 Exp-1 &  &  &  &  \\
 \hline
@@ -375,17 +398,15 @@ Exp-5 &  &  &  &  \\
 Exp-6 &  &  &  &  \\
 \hline
 \end{tabular}
-\label{tab_result}
-\end{center}
+\label{tab_experiment}
 \end{table}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{normalization_comparison.png}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{normalization_comparison.png}
 \caption{Comparison of Experimental Accuracy}
-\label{fig_exp}
+\label{fig_experiment}
 \end{figure}
-
-The experimental results indicate that normalization significantly affects ANN classification performance. The Full Dataset scenario consistently achieved better performance than the Symptoms-Only scenario because laboratory features provide additional clinical information.
 
 % =====================================================
 % CROSS VALIDATION RESULT
@@ -393,12 +414,12 @@ The experimental results indicate that normalization significantly affects ANN c
 
 \subsection{Cross Validation Results}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Cross Validation Results}
-\begin{center}
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
-Scenario & Mean Accuracy & Std Dev \\
+\textbf{Scenario} & \textbf{Mean Accuracy} & \textbf{Std Deviation} \\
 \hline
 CV-1 &  &  \\
 \hline
@@ -413,17 +434,15 @@ CV-5 &  &  \\
 CV-6 &  &  \\
 \hline
 \end{tabular}
-\label{tab_cv}
-\end{center}
+\label{tab_cv_result}
 \end{table}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{cv_comparison.png}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{cv_comparison.png}
 \caption{Cross Validation Accuracy Comparison}
 \label{fig_cv}
 \end{figure}
-
-Cross Validation results indicate that the MinMaxScaler scenario achieved better stability and consistency compared to other normalization methods.
 
 % =====================================================
 % CONFUSION MATRIX
@@ -431,13 +450,12 @@ Cross Validation results indicate that the MinMaxScaler scenario achieved better
 
 \subsection{Confusion Matrix Analysis}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{confusion_matrix.png}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{confusion_matrix.png}
 \caption{Confusion Matrix Comparison for Three Normalization Methods}
 \label{fig_cm}
 \end{figure}
-
-The confusion matrix analysis shows that MinMaxScaler produced fewer classification errors compared to other normalization techniques.
 
 % =====================================================
 % ROC CURVE
@@ -445,13 +463,25 @@ The confusion matrix analysis shows that MinMaxScaler produced fewer classificat
 
 \subsection{ROC Curve Analysis}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=0.45\textwidth]{ROC.png}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{ROC.png}
 \caption{ROC Curve Comparison for Three Normalization Methods}
 \label{fig_roc}
 \end{figure}
 
-The ROC Curve results demonstrate that the MinMaxScaler scenario achieved the highest classification capability among all experimental scenarios.
+% =====================================================
+% DISCUSSION
+% =====================================================
+
+\subsection{Discussion}
+
+% Discussion about:
+% - Best normalization
+% - Effect of laboratory features
+% - Model stability
+% - Performance comparison
+% - Healthcare implementation
 
 % =====================================================
 % CONCLUSION
@@ -459,31 +489,68 @@ The ROC Curve results demonstrate that the MinMaxScaler scenario achieved the hi
 
 \section{Conclusion}
 
-This study presented a comparative analysis of normalization techniques and cross-validation scenarios for Deep Learning-based Dengue Fever classification. Experimental results demonstrate that normalization significantly affects classification performance. The best performance was achieved using the full dataset with MinMaxScaler normalization. Cross Validation results also indicate good model stability and generalization capability. The proposed Deep Learning model demonstrates promising potential for healthcare decision support systems.
+% Fill conclusion here
+
+% =====================================================
+% FUTURE WORK
+% =====================================================
+
+\section{Future Work}
+
+% Fill future work here
+
+% =====================================================
+% ACKNOWLEDGMENT
+% =====================================================
+
+\section*{Acknowledgment}
+
+% Optional acknowledgment
 
 % =====================================================
 % REFERENCES
 % =====================================================
 
-\section*{References}
-
 \begin{thebibliography}{00}
 
 \bibitem{b1}
-Author, ``Deep Learning for Dengue Classification,'' IEEE Conference, 2024.
+World Health Organization, 
+``Dengue and Severe Dengue,'' 
+WHO Fact Sheets, 2024. 
+[Online]. Available: https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue
 
 \bibitem{b2}
-Author, ``Normalization Techniques in Machine Learning,'' Elsevier, 2023.
+S. Simmons, J. Farrar, N. van Vinh Chau, and B. Wills,
+``Dengue,'' 
+\textit{New England Journal of Medicine}, 
+vol. 366, no. 15, pp. 1423--1432, 2012.
 
 \bibitem{b3}
-Author, ``Cross Validation for Healthcare AI,'' Springer, 2022.
+Y. LeCun, Y. Bengio, and G. Hinton,
+``Deep Learning,'' 
+\textit{Nature}, 
+vol. 521, no. 7553, pp. 436--444, 2015.
 
 \bibitem{b4}
-Author, ``ANN-Based Medical Classification,'' IEEE Access, 2021.
+I. Goodfellow, Y. Bengio, and A. Courville,
+\textit{Deep Learning}. 
+Cambridge, MA, USA: MIT Press, 2016.
 
 \bibitem{b5}
-Author, ``Healthcare Artificial Intelligence,'' ACM, 2020.
+S. Raschka and V. Mirjalili,
+\textit{Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow}. 
+3rd ed. Birmingham, U.K.: Packt Publishing, 2019.
+
+\bibitem{b6}
+T. Hastie, R. Tibshirani, and J. Friedman,
+\textit{The Elements of Statistical Learning}. 
+2nd ed. New York, NY, USA: Springer, 2009.
 
 \end{thebibliography}
+
+
+% =====================================================
+% END DOCUMENT
+% =====================================================
 
 \end{document}

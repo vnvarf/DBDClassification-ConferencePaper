@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.12)  20 MAY 2026 00:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.12)  20 MAY 2026 01:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -244,95 +244,110 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@cntb=\count306
 \multirow@dima=\skip56
 \bigstrutjot=\dimen196
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen197
+\ar@mcellbox=\box57
+\extrarowheight=\dimen198
+\NC@list=\toks24
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box58
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count307
+\float@exts=\toks25
+\float@box=\box59
+\@float@everytoks=\toks26
+\@floatcapt=\box60
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count307
+\l__color_backend_stack_int=\count308
 ) (./jurnalDBD.aux)
 \openout1 = `jurnalDBD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 -- Lines per column: 56 (exact).
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen197
-\scratchbox=\box57
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen198
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count309
+\scratchdimen=\dimen199
+\scratchbox=\box61
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen256
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks28
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<workflow.png, id=1, 368.37625pt x 964.60374pt>
-File: workflow.png Graphic file (type png)
-<use workflow.png>
-Package pdftex.def Info: workflow.png  used on input line 126.
-(pdftex.def)             Requested size: 232.19843pt x 608.01268pt.
-<deeplearning_architecture.png, id=3, 392.46625pt x 242.9075pt>
-File: deeplearning_architecture.png Graphic file (type png)
-<use deeplearning_architecture.png>
-Package pdftex.def Info: deeplearning_architecture.png  used on input line 273.
-(pdftex.def)             Requested size: 232.19843pt x 143.71446pt.
- [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
+) [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<training acc&loss.png, id=14, 1101.11375pt x 371.3875pt>
+<workflow.png, id=11, 583.17876pt x 543.02875pt>
+File: workflow.png Graphic file (type png)
+<use workflow.png>
+Package pdftex.def Info: workflow.png  used on input line 153.
+(pdftex.def)             Requested size: 247.6778pt x 230.62257pt.
+<deeplearning_architecture.png, id=13, 392.46625pt x 242.9075pt>
+File: deeplearning_architecture.png Graphic file (type png)
+<use deeplearning_architecture.png>
+Package pdftex.def Info: deeplearning_architecture.png  used on input line 296.
+(pdftex.def)             Requested size: 242.52063pt x 150.10442pt.
+ [2 <./workflow.png> <./deeplearning_architecture.png>]
+<training acc&loss.png, id=19, 1101.11375pt x 371.3875pt>
 File: training acc&loss.png Graphic file (type png)
 <use training acc&loss.png>
-Package pdftex.def Info: training acc&loss.png  used on input line 345.
-(pdftex.def)             Requested size: 232.19843pt x 78.31668pt.
-<normalization_comparison.png, id=15, 1102.1175pt x 493.845pt>
+Package pdftex.def Info: training acc&loss.png  used on input line 368.
+(pdftex.def)             Requested size: 247.6778pt x 83.5359pt.
+<normalization_comparison.png, id=20, 1102.1175pt x 493.845pt>
 File: normalization_comparison.png Graphic file (type png)
 <use normalization_comparison.png>
-Package pdftex.def Info: normalization_comparison.png  used on input line 383.
-(pdftex.def)             Requested size: 232.19843pt x 104.04207pt.
-<cv_comparison.png, id=16, 1098.1025pt x 490.83376pt>
+Package pdftex.def Info: normalization_comparison.png  used on input line 406.
+(pdftex.def)             Requested size: 247.6778pt x 110.97469pt.
+<cv_comparison.png, id=21, 1098.1025pt x 490.83376pt>
 File: cv_comparison.png Graphic file (type png)
 <use cv_comparison.png>
-Package pdftex.def Info: cv_comparison.png  used on input line 421.
-(pdftex.def)             Requested size: 232.19843pt x 103.78214pt.
- [2 <./workflow.png> <./deeplearning_architecture.png>]
+Package pdftex.def Info: cv_comparison.png  used on input line 442.
+(pdftex.def)             Requested size: 247.6778pt x 110.70244pt.
 <confusion_matrix.png, id=22, 1102.1175pt x 356.33125pt>
 File: confusion_matrix.png Graphic file (type png)
 <use confusion_matrix.png>
-Package pdftex.def Info: confusion_matrix.png  used on input line 435.
-(pdftex.def)             Requested size: 232.19843pt x 75.071pt.
+Package pdftex.def Info: confusion_matrix.png  used on input line 455.
+(pdftex.def)             Requested size: 247.6778pt x 80.0732pt.
 <ROC.png, id=23, 736.7525pt x 512.91624pt>
 File: ROC.png Graphic file (type png)
 <use ROC.png>
-Package pdftex.def Info: ROC.png  used on input line 449.
-(pdftex.def)             Requested size: 232.19843pt x 161.64774pt.
+Package pdftex.def Info: ROC.png  used on input line 468.
+(pdftex.def)             Requested size: 247.6778pt x 172.42477pt.
  [3 <./training acc&loss.png> <./normalization_comparison.png> <./cv_comparison.png> <./confusion_matrix.png> <./ROC.png>]
 
 ** Conference Paper **
@@ -354,15 +369,15 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4205 strings out of 467525
- 66703 string characters out of 5418982
- 495112 words of memory out of 5000000
- 33080 multiletter control sequences out of 15000+600000
- 663611 words of font info for 110 fonts, out of 8000000 for 9000
+ 4353 strings out of 467525
+ 68903 string characters out of 5418982
+ 493972 words of memory out of 5000000
+ 33219 multiletter control sequences out of 15000+600000
+ 665854 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,673b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,835b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on jurnalDBD.pdf (4 pages, 1159504 bytes).
+Output written on jurnalDBD.pdf (4 pages, 1994952 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream
