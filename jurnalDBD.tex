@@ -75,43 +75,25 @@ Deep Learning, Dengue Fever, Artificial Neural Network, Classification, Normaliz
 
 \section{Introduction}
 
-Dengue Fever is one of the most significant mosquito-borne infectious diseases in tropical and subtropical countries. According to the \textit{World Health Organization (WHO)}, the global incidence of Dengue has increased rapidly over the past decades, particularly in Southeast Asia and other tropical regions. Early detection and classification of Dengue Fever are essential to reduce mortality rates and improve clinical treatment effectiveness \cite{b1}.
+Dengue Hemorrhagic Fever (DHF) remains one of the most prevalent infectious diseases in tropical and subtropical regions worldwide. This disease is caused by the dengue virus and is primarily transmitted through the bite of infected \textit{Aedes aegypti} mosquitoes. According to the World Health Organization (WHO), dengue cases have increased significantly over the past two decades, with an estimated 100--400 million infections occurring annually, particularly in Southeast Asia and Latin America \cite{b1}. The high incidence rate poses major challenges to healthcare systems, especially in developing countries with limited medical resources \cite{b2}. Therefore, timely and accurate diagnosis is essential to reduce the risk of complications and mortality associated with DHF \cite{b3}.
 
-Conventional diagnosis of Dengue Fever generally relies on clinical symptoms and laboratory examinations performed by healthcare professionals. Common symptoms include fever, headache, nausea, muscle pain, and skin rash, while laboratory indicators such as platelet count, hematocrit, leukocyte count, and hemoglobin level are often used to support diagnosis. However, manual interpretation of clinical data may require considerable time and may be affected by human error, especially when the number of patients increases significantly \cite{b2}.
+Dengue diagnosis is generally performed through clinical symptom evaluation and laboratory examinations, including platelet count, hematocrit, leukocyte count, and hemoglobin levels \cite{b4}. However, the diagnostic process often faces several challenges, particularly when dealing with large patient volumes or symptoms that overlap with other infectious diseases. In addition, manual interpretation of medical data may lead to inconsistencies in clinical decision-making. In this context, advancements in \textit{Artificial Intelligence} (AI), particularly \textit{Machine Learning} (ML) and \textit{Deep Learning} (DL), offer promising approaches due to their capability to automatically identify complex relationships within medical data \cite{b5}. Previous studies have also demonstrated that DL-based approaches achieve strong performance in disease prediction and medical data classification involving heterogeneous characteristics \cite{b6, b7}.
 
-Recent developments in Artificial Intelligence (AI) and Deep Learning have demonstrated promising performance in medical classification and prediction systems. Deep Learning models are capable of learning complex non-linear relationships from medical datasets and have been widely applied in disease diagnosis, image classification, and healthcare decision support systems \cite{b3}. Among various Deep Learning approaches, Artificial Neural Network (ANN) models have shown good capability in binary classification problems due to their ability to capture hidden patterns within clinical datasets \cite{b4}.
+Nevertheless, studies investigating the impact of preprocessing techniques, particularly data normalization, on the performance of Deep Learning models for dengue classification remain relatively limited. Variations in feature scales within healthcare datasets may influence training stability and prediction performance \cite{b8}. Furthermore, appropriate evaluation methods, such as \textit{Cross Validation}, are required to ensure better generalization capability and reduce the risk of overfitting \cite{b9}.
 
-Several previous studies have implemented Machine Learning and Deep Learning techniques for Dengue prediction and classification. However, many studies mainly focus on model performance without comprehensively analyzing the influence of preprocessing techniques such as data normalization and validation strategies. In fact, normalization techniques can significantly affect Deep Learning performance because numerical feature scales may influence the convergence process during model training \cite{b5}. Furthermore, Cross Validation is important to evaluate model stability and generalization capability in healthcare datasets \cite{b6}.
-
-Therefore, this study proposes a Deep Learning-based Dengue Fever classification system using clinical symptom and laboratory examination datasets. This research focuses on comparative analysis of normalization techniques and Cross Validation scenarios to determine the optimal classification performance. Two dataset scenarios were evaluated, including a full dataset consisting of symptom and laboratory features, and a symptom-only dataset. Three normalization methods were implemented, namely without normalization, StandardScaler, and MinMaxScaler, resulting in six experimental scenarios. In addition, K-Fold Cross Validation was applied to evaluate the robustness and stability of the proposed model.
-
-The results of this study are expected to contribute to the development of healthcare decision support systems and provide insights regarding the influence of preprocessing techniques on Deep Learning-based medical classification systems.
+Based on these considerations, this study develops a Deep Learning-based DHF classification model utilizing clinical symptoms and laboratory examination data. The primary focus of this research is to compare the effects of normalization techniques and \textit{Cross Validation} scenarios on model performance. Experiments were conducted using two dataset types, namely the \textit{full-feature dataset} and the \textit{symptom-only dataset}, with three normalization approaches: no normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}. Model evaluation was performed using \textit{K-Fold Cross Validation} to obtain more stable and reliable results. This study is expected to contribute to the development of more effective and accurate intelligent medical decision support systems.
 
 \subsection{Research Contributions}
 
 The main contributions of this study are summarized as follows:
 
-\begin{itemize}
+\begin{enumerate}
+    \item This study develops a Deep Learning-based classification model for Dengue Hemorrhagic Fever (DHF) by utilizing clinical symptom data and laboratory examination results to support faster and more accurate diagnosis.
 
-\item Comparative analysis of normalization techniques for Dengue Fever classification.
+    \item This study compares two dataset scenarios, namely the f\textit{full-feature dataset} and the \textit{symptom-only dataset}, while also evaluating several normalization techniques, including no normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}, to examine their impact on classification performance.
 
-\item Comparative analysis between full dataset and symptom-only dataset.
-
-\item Evaluation of model stability using K-Fold Cross Validation.
-
-\item Development of a Deep Learning-based healthcare classification system.
-
-\item Investigation of the influence of clinical symptoms and laboratory examination features on classification performance.
-
-\item Evaluation of the effectiveness of StandardScaler and MinMaxScaler normalization techniques in improving Deep Learning performance.
-
-\item Analysis of model generalization capability through multiple cross-validation scenarios.
-
-\item Identification of the best experimental scenario based on classification performance metrics including Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
-
-\item Development of an experimental framework that can be applied to other healthcare classification problems using Deep Learning approaches.
-
-\end{itemize}
+    \item To ensure more reliable results, the proposed model is evaluated using \textit{K-Fold Cross Validation}, providing a better understanding of model stability and the influence of preprocessing strategies on Deep Learning-based dengue classification.
+\end{enumerate}
 
 % =====================================================
 % RELATED WORK
@@ -119,22 +101,19 @@ The main contributions of this study are summarized as follows:
 
 \section{Related Work}
 
-\begin{table}[H]
-\caption{Summary of Related Studies}
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Study} & \textbf{Method} & \textbf{Accuracy} \\
-\hline
-Study A & ANN & 92\% \\
-\hline
-Study B & CNN & 94\% \\
-\hline
-Study C & Random Forest & 89\% \\
-\hline
-\end{tabular}
-\label{tab_related}
-\end{table}
+Previous studies have demonstrated that Machine Learning and Deep Learning approaches are effective for Dengue Fever classification and prediction. Andrade Girón \textit{et al}.~\cite{b10} conducted a systematic review showing that ANN, CNN, Random Forest, SVM, and XGBoost are commonly applied for dengue diagnosis. Their review also reported that normalization methods such as MinMaxScaler and Z-score normalization, combined with 10-Fold and Stratified K-Fold Cross Validation, improved model performance and generalization.
+
+Several researchers specifically emphasized the importance of normalization and Cross Validation in healthcare classification systems. Ravi \textit{et al}.~\cite{b11} explained that Z-score normalization improves Deep Learning performance on biomedical datasets, while 5-Fold and 10-Fold Cross Validation help reduce overfitting. Similarly, Behera \textit{et al}.~\cite{b16} showed that StandardScaler normalization and 10-Fold Cross Validation increased classification stability in biomedical data analysis. Cholet~\cite{b18} also highlighted that normalization techniques stabilize Deep Learning training and improve convergence.
+
+In the context of Dengue Fever classification, Hamdani \textit{et al}.~\cite{b12} applied Support Vector Machine (SVM) with standardized clinical data and achieved 99.1\% accuracy using 5-Fold and 10-Fold Cross Validation. Another study by Hamdani \textit{et al}.~\cite{b14} utilized Artificial Neural Networks for dengue diagnosis using symptom data and obtained 97.17\% accuracy after applying feature normalization and K-Fold validation.
+
+Deep Learning-based approaches have also shown promising results for dengue prediction. Ramasamy \textit{et al}.~\cite{b13,b17} proposed a Neural Network model with feature optimization and StandardScaler normalization, achieving 97.1\% accuracy using 5-Fold Cross Validation. Anibal \textit{et al}.~\cite{b15} and Majeed \textit{et al}.~\cite{b20} implemented Deep Learning models for dengue forecasting using MinMaxScaler normalization and validation techniques to improve prediction reliability.
+
+Other studies compared multiple Machine Learning algorithms using clinical and laboratory datasets. Abdualgalil \textit{et al}.~\cite{b21} applied Z-score normalization, SMOTE+ENN balancing, and 10-Fold Cross Validation, where the Extra Tree Classifier achieved 99.03\% accuracy. Sriyanto \textit{et al}.~\cite{b22} compared several Machine Learning algorithms using StandardScaler normalization and reported that Neural Network and Decision Tree models achieved the highest accuracy of 99.4\%.
+
+In Indonesia, Dewi \textit{et al}.~\cite{b23} developed a Machine Learning model for predicting dengue cases and severity using Min-Max scaling and reported that XGBoost achieved the best performance with 85\% accuracy. Xu and Xiao~\cite{b19} also emphasized that feature scaling and Cross Validation improve model generalization in dengue prediction systems.
+
+Based on previous studies, normalization techniques and Cross Validation significantly influence the performance and stability of healthcare classification models. However, limited studies comprehensively compare multiple normalization methods and dataset scenarios for Deep Learning-based Dengue Fever classification. Therefore, this study focuses on comparative analysis of normalization techniques and Cross Validation scenarios using both full clinical-laboratory datasets and symptom-only datasets.
 
 % =====================================================
 % RESEARCH METHODOLOGY
@@ -150,10 +129,15 @@ Study C & Random Forest & 89\% \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.48\textwidth]{workflow.png}
+\includegraphics[width=0.60\textwidth]{workflow.png}
 \caption{Research Workflow}
 \label{fig_workflow}
 \end{figure}
+Fig.~\ref{fig_workflow} illustrates the research workflow used in this study. The first stage begins with collecting a clinical dataset consisting of symptoms and laboratory examination data related to Dengue Fever. Afterward, data preprocessing was performed, including data cleaning, missing value handling, and feature encoding to improve dataset quality.
+
+After preprocessing, the dataset was divided into two scenarios, namely the full dataset containing symptom and laboratory features, and the symptoms-based dataset containing only symptom features. For each dataset scenario, normalization experiments were conducted using three methods: without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}.
+
+The classification process was performed using a Deep Learning model with the implementation of 5-Fold Cross Validation to improve model reliability and reduce overfitting. Furthermore, model performance was evaluated using several evaluation metrics, including Accuracy, Precision, Recall, F1-Score, and ROC-AUC. The final output of this study is the classification result of Dengue Fever into positive or negative categories.
 
 % =====================================================
 % DATASET
@@ -161,24 +145,34 @@ Study C & Random Forest & 89\% \\
 
 \subsection{Dataset}
 
-The dataset used in this study consists of clinical symptom and laboratory examination data.
+The dataset used in this study consists of clinical data related to Dengue Fever (DF) patients, including demographic information, vital signs, laboratory examination results, and clinical symptoms. The dataset was collected to support the development of a Deep Learning-based classification system for early Dengue Fever prediction.
+
+In total, the dataset contains 20 input features and 1 target label. The target label represents the diagnosis result, which classifies patients into positive or negative Dengue Fever categories.
+
+To facilitate analysis, the dataset attributes were grouped into several categories, namely demographic data, vital signs, laboratory examination features, and clinical symptoms.
 
 \begin{table}[H]
 \caption{Dataset Attribute Categories}
 \centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|p{5.5cm}|}
 \hline
-\textbf{Category} & \textbf{Number of Features} \\
+\textbf{Category} & \textbf{Attributes} \\
 \hline
-Symptoms & 9 \\
+Demographic Data & Age, Gender \\
 \hline
-Laboratory Features & 4 \\
+Vital Signs & Temperature, Systolic Blood Pressure, Diastolic Blood Pressure \\
 \hline
-Total Features & 13 \\
+Laboratory Features & Platelet, Leukocyte, Hematocrit, Hemoglobin \\
+\hline
+Clinical Symptoms & Fever, Fever Duration, Headache, Nausea, Vomiting, Abdominal Pain, Fatigue, Loss of Appetite, Red Spots, Body Pain, Abdominal Distension, Joint Pain \\
+\hline
+Target Label & Diagnosis \\
 \hline
 \end{tabular}
 \label{tab_dataset}
 \end{table}
+
+The dataset was divided into two experimental scenarios. The first scenario utilized the complete dataset consisting of symptom and laboratory features, while the second scenario utilized only symptom-related features for early prediction analysis. This approach was designed to evaluate whether symptom-based data alone are sufficient for early Dengue Fever classification before laboratory examination results become available.
 
 % =====================================================
 % DATASET SCENARIO
@@ -186,18 +180,20 @@ Total Features & 13 \\
 
 \subsection{Dataset Scenarios}
 
-Two dataset scenarios were evaluated in this study.
+This study evaluated two dataset scenarios to analyze the influence of dataset composition on Deep Learning classification performance for Dengue Fever prediction. The first scenario utilized the complete dataset consisting of demographic data, vital signs, laboratory examination results, and clinical symptoms. This scenario was designed to provide more comprehensive medical information for the classification process and improve prediction accuracy.
+
+The second scenario utilized only symptom-related features without laboratory examination results. This scenario was intended to simulate early Dengue Fever prediction conditions where laboratory data may not yet be available during the initial patient examination. By comparing these two scenarios, this study aims to evaluate whether symptom-based data alone are sufficient for early Dengue Fever classification and to measure the contribution of laboratory features toward improving model performance.
 
 \begin{table}[H]
-\caption{Dataset Scenarios}
+\caption{Dataset Configurations}
 \centering
-\begin{tabular}{|c|m{5cm}|}
+\begin{tabular}{|c|p{5.5cm}|}
 \hline
-\textbf{Scenario} & \textbf{Dataset Composition} \\
+\textbf{Dataset Configuration} & \textbf{Dataset Composition} \\
 \hline
-Scenario 1 & Symptoms + Laboratory Features \\
+Dataset 1 & Demographic Data + Vital Signs + Clinical Symptoms + Laboratory Features \\
 \hline
-Scenario 2 & Symptoms Features Only \\
+Dataset 2 & Demographic Data + Vital Signs + Clinical Symptoms \\
 \hline
 \end{tabular}
 \label{tab_scenario}
@@ -209,17 +205,25 @@ Scenario 2 & Symptoms Features Only \\
 
 \subsection{Data Preprocessing}
 
-The preprocessing stage includes:
+Data preprocessing was performed to improve dataset quality before the training process. This stage is important to ensure that the input data can be processed effectively by the Deep Learning model. The preprocessing stage in this study consists of several steps, including data cleaning, handling missing values, feature encoding, and data normalization.
 
 \begin{itemize}
 
-\item Data Cleaning
+\item \textbf{Data Cleaning}
 
-\item Missing Value Handling
+The data cleaning process was conducted to identify inconsistent, duplicated, or invalid data within the dataset. Several records containing incomplete or irrelevant information were examined to maintain data quality and improve model performance.
 
-\item Feature Encoding
+\item \textbf{Missing Value Handling}
 
-\item Data Normalization
+Missing values in the dataset were handled using appropriate preprocessing techniques. Numerical attributes with missing values were replaced using statistical approaches to maintain dataset consistency and avoid information loss during model training.
+
+\item \textbf{Feature Encoding}
+
+Categorical attributes such as gender and diagnosis labels were transformed into numerical representations using encoding techniques. This process allows the Deep Learning model to process categorical data effectively during the classification stage.
+
+\item \textbf{Data Normalization}
+
+Feature normalization was applied to reduce differences in numerical scale among attributes. In this study, three normalization approaches were evaluated, namely without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}. The normalization process aims to improve training stability and optimize classification performance.
 
 \end{itemize}
 
@@ -228,37 +232,63 @@ The preprocessing stage includes:
 % =====================================================
 
 \subsection{Normalization Experiments}
+% =====================================================
+% NORMALIZATION FRAMEWORK
+% =====================================================
 
-Three normalization methods were evaluated:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{eksperiment.png}
+\caption{Normalization Experiment Framework}
+\label{fig_norm_framework}
+\end{figure}
+
+Fig.~\ref{fig_norm_framework} illustrates the normalization experiment framework used in this study. The experiment started by applying three normalization approaches, namely without normalization, StandardScaler, and MinMaxScaler. Each normalization method was then evaluated using two dataset configurations, including the complete dataset and the symptoms-only dataset. The classification performance of each experiment was evaluated using several performance metrics.
+
+% =====================================================
+% NORMALIZATION EXPERIMENTS
+% =====================================================
+
+Normalization experiments were conducted to analyze the effect of feature scaling on the performance of the Deep Learning classification model. Since the dataset contains attributes with different numerical ranges, normalization is important to ensure that all features contribute proportionally during the training process.
+
+In this study, three normalization approaches were evaluated:
 
 \begin{itemize}
 
-\item Without Normalization
+\item \textbf{Without Normalization}
 
-\item StandardScaler
+The original dataset was directly used without applying any scaling technique. This experiment was conducted to observe baseline model performance.
 
-\item MinMaxScaler
+\item \textbf{StandardScaler}
+
+StandardScaler transforms the data distribution into a standard normal distribution with a mean of 0 and standard deviation of 1. This method is commonly used to stabilize the learning process in Deep Learning models.
+
+\item \textbf{MinMaxScaler}
+
+MinMaxScaler transforms feature values into a fixed range between 0 and 1. This method is widely used in Artificial Neural Networks because it helps improve gradient optimization and training convergence.
 
 \end{itemize}
 
+Each normalization method was applied to two dataset configurations, namely the complete dataset containing clinical symptoms and laboratory features, and the symptoms-only dataset. The experimental results from all normalization methods were then compared based on classification performance metrics.
+
 \begin{table}[H]
-\caption{Normalization Experiment Scenarios}
+\caption{Normalization Experiment Configurations}
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
-\textbf{Experiment} & \textbf{Dataset} & \textbf{Normalization} \\
+\textbf{Experiment} & \textbf{Dataset Configuration} & \textbf{Normalization Method} \\
 \hline
-Exp-1 & Full Dataset & None \\
+Exp-1 & Complete Dataset & Without Normalization \\
 \hline
-Exp-2 & Full Dataset & StandardScaler \\
+Exp-2 & Complete Dataset & StandardScaler \\
 \hline
-Exp-3 & Full Dataset & MinMaxScaler \\
+Exp-3 & Complete Dataset & MinMaxScaler \\
 \hline
-Exp-4 & Symptoms Only & None \\
+Exp-4 & Symptoms Dataset & Without Normalization \\
 \hline
-Exp-5 & Symptoms Only & StandardScaler \\
+Exp-5 & Symptoms Dataset & StandardScaler \\
 \hline
-Exp-6 & Symptoms Only & MinMaxScaler \\
+Exp-6 & Symptoms Dataset & MinMaxScaler \\
 \hline
 \end{tabular}
 \label{tab_norm}
@@ -291,12 +321,12 @@ Output Layer & 1 & Sigmoid \\
 \label{tab_model}
 \end{table}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.47\textwidth]{deeplearning_architecture.png}
-\caption{Artificial Neural Network Architecture}
-\label{fig_ann}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.47\textwidth]{deeplearning_architecture.png}
+% \caption{Artificial Neural Network Architecture}
+% \label{fig_ann}
+% \end{figure}
 
 % =====================================================
 % CROSS VALIDATION
@@ -511,42 +541,9 @@ CV-6 &  &  \\
 % REFERENCES
 % =====================================================
 
-\begin{thebibliography}{00}
+\bibliographystyle{IEEEtran}
+\bibliography{references.bib}
 
-\bibitem{b1}
-World Health Organization, 
-``Dengue and Severe Dengue,'' 
-WHO Fact Sheets, 2024. 
-[Online]. Available: https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue
-
-\bibitem{b2}
-S. Simmons, J. Farrar, N. van Vinh Chau, and B. Wills,
-``Dengue,'' 
-\textit{New England Journal of Medicine}, 
-vol. 366, no. 15, pp. 1423--1432, 2012.
-
-\bibitem{b3}
-Y. LeCun, Y. Bengio, and G. Hinton,
-``Deep Learning,'' 
-\textit{Nature}, 
-vol. 521, no. 7553, pp. 436--444, 2015.
-
-\bibitem{b4}
-I. Goodfellow, Y. Bengio, and A. Courville,
-\textit{Deep Learning}. 
-Cambridge, MA, USA: MIT Press, 2016.
-
-\bibitem{b5}
-S. Raschka and V. Mirjalili,
-\textit{Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow}. 
-3rd ed. Birmingham, U.K.: Packt Publishing, 2019.
-
-\bibitem{b6}
-T. Hastie, R. Tibshirani, and J. Friedman,
-\textit{The Elements of Statistical Learning}. 
-2nd ed. New York, NY, USA: Springer, 2009.
-
-\end{thebibliography}
 
 
 % =====================================================

@@ -1,6 +1,14 @@
 # Fdb version 4
-["pdflatex"] 1779214298.60466 "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" "jurnalDBD.pdf" "jurnalDBD" 1779214302.38644 0
-  "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" 1779214298.29333 15954 5d89b1e5028834c5a73c2fb7fb7857a4 ""
+["bibtex jurnalDBD"] 1779391234.95336 "jurnalDBD.aux" "jurnalDBD.bbl" "jurnalDBD" 1779391243.49967 2
+  "./references.bib" 1779384515.3799 7074 5477b3e7b31342d1bbd6b14282b3183c ""
+  "/usr/local/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
+  "jurnalDBD.aux" 1779391243.09667 5848 837051951be877f2032442bd9b935fc8 "pdflatex"
+  (generated)
+  "jurnalDBD.bbl"
+  "jurnalDBD.blg"
+  (rewritten before read)
+["pdflatex"] 1779391239.44816 "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" "jurnalDBD.pdf" "jurnalDBD" 1779391243.49995 0
+  "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" 1779391229.51497 25098 8a5bab53d5e92968957f95f35d143e36 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -73,9 +81,10 @@
   "ROC.png" 1779209612.38899 241970 0134521e50fec0365d0f3ec962c17213 ""
   "confusion_matrix.png" 1779209612.3999 166183 75c3e3e5d1c3fea05f33e18ed88a727d ""
   "cv_comparison.png" 1779209347.20557 189403 736b52585da804a55b4e778ddcfcbf2c ""
-  "deeplearning_architecture.png" 1779208677.63234 294077 9da52250b9a8a133c7f84c2580335eaa ""
-  "jurnalDBD.aux" 1779214302.31812 5434 37daf96592af287e127b28c8225f26e8 "pdflatex"
-  "jurnalDBD.tex" 1779214298.29333 15954 5d89b1e5028834c5a73c2fb7fb7857a4 ""
+  "eksperiment.png" 1779389993.60466 69611 40df7b0118d4e68a1dc983ddaf755538 ""
+  "jurnalDBD.aux" 1779391243.09667 5848 837051951be877f2032442bd9b935fc8 "pdflatex"
+  "jurnalDBD.bbl" 1779391235.12648 6093 8aaef4c6b48042cc8de536bc1780c089 "bibtex jurnalDBD"
+  "jurnalDBD.tex" 1779391229.51497 25098 8a5bab53d5e92968957f95f35d143e36 ""
   "normalization_comparison.png" 1779209223.27184 200683 7b24820d145111883a86c4cfa211bb80 ""
   "training acc&loss.png" 1779209066.52456 314687 2ab4201895018059e8705f826fa0bf02 ""
   "workflow.png" 1779214106.24948 1237576 d3fe3cfabec0875e3168781867ddbdb8 ""
