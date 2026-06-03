@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.12)  22 MAY 2026 02:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.12)  2 JUN 2026 17:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -260,115 +260,149 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box59
 \@float@everytoks=\toks26
 \@floatcapt=\box60
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks27
+\minrowclearance=\skip59
+\rownum=\count308
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count308
+\l__color_backend_stack_int=\count309
 ) (./jurnalDBD.aux)
 \openout1 = `jurnalDBD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 -- Lines per column: 56 (exact).
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
+\scratchcounter=\count310
 \scratchdimen=\dimen199
 \scratchbox=\box61
-\nofMPsegments=\count310
-\nofMParguments=\count311
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count312
+\nofMPsegments=\count311
+\nofMParguments=\count312
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count313
 \MPscratchDim=\dimen256
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Underfull \vbox (badness 1867) has occurred while \output is active []
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<workflow.png, id=10, 583.17876pt x 543.02875pt>
+<workflow.png, id=10, 331.2375pt x 437.635pt>
 File: workflow.png Graphic file (type png)
 <use workflow.png>
-Package pdftex.def Info: workflow.png  used on input line 132.
-(pdftex.def)             Requested size: 309.60315pt x 288.29272pt.
+Package pdftex.def Info: workflow.png  used on input line 121.
+(pdftex.def)             Requested size: 206.39685pt x 272.69316pt.
 
-Overfull \hbox (57.60315pt too wide) in paragraph at lines 132--133
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+ [2 <./workflow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\OT1/ptm/m/n/8 Platelet, Leuko-cyte, Hema-t-ocrit,
+ []
+
+
+Overfull \hbox (1.84064pt too wide) in paragraph at lines 143--157
  [][] 
  []
 
-[2 <./workflow.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 157.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 157.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (6.46556pt too wide) in paragraph at lines 190--200
+
+Overfull \hbox (6.46555pt too wide) in paragraph at lines 187--197
  [][] 
  []
 
-<eksperiment.png, id=16, 631.35875pt x 375.4025pt>
-File: eksperiment.png Graphic file (type png)
-<use eksperiment.png>
-Package pdftex.def Info: eksperiment.png  used on input line 241.
-(pdftex.def)             Requested size: 247.6778pt x 147.26561pt.
+<Experiments Flow.png, id=16, 631.35875pt x 375.4025pt>
+File: Experiments Flow.png Graphic file (type png)
+<use Experiments Flow.png>
+Package pdftex.def Info: Experiments Flow.png  used on input line 245.
+(pdftex.def)             Requested size: 232.19843pt x 138.06616pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2065) has occurred while \output is active []
 
- [3]
-<training acc&loss.png, id=21, 1101.11375pt x 371.3875pt>
+ [3] [4 <./Experiments Flow.png>]
+<training acc&loss.png, id=29, 1101.11375pt x 371.3875pt>
 File: training acc&loss.png Graphic file (type png)
 <use training acc&loss.png>
-Package pdftex.def Info: training acc&loss.png  used on input line 398.
+Package pdftex.def Info: training acc&loss.png  used on input line 454.
 (pdftex.def)             Requested size: 247.6778pt x 83.5359pt.
- [4 <./eksperiment.png> <./training acc&loss.png>]
-<normalization_comparison.png, id=27, 1102.1175pt x 493.845pt>
+
+Overfull \hbox (4.9777pt too wide) in paragraph at lines 481--481
+ []|\OT1/ptm/b/n/8 Standard 
+ []
+
+
+Overfull \hbox (4.16849pt too wide) in paragraph at lines 481--481
+ []|\OT1/ptm/b/n/8 MinMax 
+ []
+
+<normalization_comparison.png, id=30, 1102.1175pt x 493.845pt>
 File: normalization_comparison.png Graphic file (type png)
 <use normalization_comparison.png>
-Package pdftex.def Info: normalization_comparison.png  used on input line 436.
+Package pdftex.def Info: normalization_comparison.png  used on input line 521.
 (pdftex.def)             Requested size: 247.6778pt x 110.97469pt.
-<cv_comparison.png, id=28, 1098.1025pt x 490.83376pt>
+<cv_comparison.png, id=31, 1098.1025pt x 490.83376pt>
 File: cv_comparison.png Graphic file (type png)
 <use cv_comparison.png>
-Package pdftex.def Info: cv_comparison.png  used on input line 472.
+Package pdftex.def Info: cv_comparison.png  used on input line 528.
 (pdftex.def)             Requested size: 247.6778pt x 110.70244pt.
-<confusion_matrix.png, id=29, 1102.1175pt x 356.33125pt>
+[5 <./training acc&loss.png> <./normalization_comparison.png> <./cv_comparison.png>]
+<confusion_matrix.png, id=39, 1102.1175pt x 356.33125pt>
 File: confusion_matrix.png Graphic file (type png)
 <use confusion_matrix.png>
-Package pdftex.def Info: confusion_matrix.png  used on input line 485.
+Package pdftex.def Info: confusion_matrix.png  used on input line 546.
 (pdftex.def)             Requested size: 247.6778pt x 80.0732pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<ROC.png, id=30, 736.7525pt x 512.91624pt>
+<ROC.png, id=40, 736.7525pt x 512.91624pt>
 File: ROC.png Graphic file (type png)
 <use ROC.png>
-Package pdftex.def Info: ROC.png  used on input line 498.
+Package pdftex.def Info: ROC.png  used on input line 553.
 (pdftex.def)             Requested size: 247.6778pt x 172.42477pt.
- (./jurnalDBD.bbl [5 <./normalization_comparison.png> <./cv_comparison.png> <./confusion_matrix.png> <./ROC.png>])
+ [6 <./confusion_matrix.png> <./ROC.png>] (./jurnalDBD.bbl
+Underfull \hbox (badness 1565) in paragraph at lines 104--105
+[]\OT1/ptm/m/n/8 S. learn De-vel-op-ers, ``Min-maxs-caler doc-u-men-ta-tion,'' https://scikit-
+ []
+
+
+Overfull \hbox (1.69339pt too wide) in paragraph at lines 104--105
+\OT1/ptm/m/n/8 learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.
+ []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -380,27 +414,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
-
-] (./jurnalDBD.aux)
+[7] (./jurnalDBD.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4388 strings out of 467525
- 69196 string characters out of 5418982
- 494013 words of memory out of 5000000
- 33250 multiletter control sequences out of 15000+600000
- 666961 words of font info for 113 fonts, out of 8000000 for 9000
+ 4514 strings out of 467525
+ 71063 string characters out of 5418982
+ 501105 words of memory out of 5000000
+ 33371 multiletter control sequences out of 15000+600000
+ 671381 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1082b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on jurnalDBD.pdf (6 pages, 1746078 bytes).
+ 58i,12n,74p,1921b,348s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on jurnalDBD.pdf (7 pages, 1448687 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
