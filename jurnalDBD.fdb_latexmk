@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex jurnalDBD"] 1780396869.95111 "jurnalDBD.aux" "jurnalDBD.bbl" "jurnalDBD" 1780396873.10571 0
+["bibtex jurnalDBD"] 1780551983.46472 "jurnalDBD.aux" "jurnalDBD.bbl" "jurnalDBD" 1780553012.89048 0
   "./references.bib" 1780077777.76321 10517 548d58cfbb8802591e9d996534b1e8d5 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "jurnalDBD.aux" 1780396872.72457 5868 699bc73eb341d6a2f03f83b32c6bae9b "pdflatex"
+  "jurnalDBD.aux" 1780553012.49276 5868 4b898c4271a62e940b29699d40b60c3a "pdflatex"
   (generated)
   "jurnalDBD.bbl"
   "jurnalDBD.blg"
   (rewritten before read)
-["pdflatex"] 1780396870.12444 "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" "jurnalDBD.pdf" "jurnalDBD" 1780396873.1059 0
-  "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" 1780396863.41277 36956 13f8985e22e6f0884fa93aa93d0de0f0 ""
+["pdflatex"] 1780553009.81455 "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" "jurnalDBD.pdf" "jurnalDBD" 1780553012.89069 0
+  "/Users/ramadhanivanvafauzia/Documents/Kuliah/Tugas Akhir /File Penulisan/Jurnal Conference/jurnalDBD.tex" 1780553009.46285 36961 6d00f7b74e5ce2389254c3da0ce3e9ca ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -40,6 +40,7 @@
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
+  "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
@@ -93,9 +94,9 @@
   "ROC.png" 1779209612.38899 241970 0134521e50fec0365d0f3ec962c17213 ""
   "confusion_matrix.png" 1779209612.3999 166183 75c3e3e5d1c3fea05f33e18ed88a727d ""
   "cv_comparison.png" 1779209347.20557 189403 736b52585da804a55b4e778ddcfcbf2c ""
-  "jurnalDBD.aux" 1780396872.72457 5868 699bc73eb341d6a2f03f83b32c6bae9b "pdflatex"
-  "jurnalDBD.bbl" 1780396870.1217 7813 44ff1b839748b37c391d1a7928c14015 "bibtex jurnalDBD"
-  "jurnalDBD.tex" 1780396863.41277 36956 13f8985e22e6f0884fa93aa93d0de0f0 ""
+  "jurnalDBD.aux" 1780553012.49276 5868 4b898c4271a62e940b29699d40b60c3a "pdflatex"
+  "jurnalDBD.bbl" 1780551983.70696 7813 44ff1b839748b37c391d1a7928c14015 "bibtex jurnalDBD"
+  "jurnalDBD.tex" 1780553009.46285 36961 6d00f7b74e5ce2389254c3da0ce3e9ca ""
   "normalization_comparison.png" 1779209223.27184 200683 7b24820d145111883a86c4cfa211bb80 ""
   "training acc&loss.png" 1779209066.52456 314687 2ab4201895018059e8705f826fa0bf02 ""
   "workflow.png" 1779778966.56269 655996 1b5aaa612a0229ddc06cd2a69c603712 ""

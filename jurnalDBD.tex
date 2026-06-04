@@ -27,7 +27,7 @@
 % =====================================================
 
 \title{
-A Comparative Analysis of StandardScaler and MinMaxScaler Normalization on Dengue Fever Classification for Deep Neural Network Model
+A Comparative Analysis of StandardScaler and MinMaxScaler Normalization for Deep Neural Network-Based Dengue Fever Classification
 }
 
 % =====================================================
@@ -140,9 +140,9 @@ Overall, the dataset contains 20 input features and 1 target label. The input fe
 \begin{table}[H]
 \caption{Input Feature Categories}
 \centering
-\begin{tabular}{|>{\centering\arraybackslash}p{1.9cm}|p{4.7cm}|>{\centering\arraybackslash}p{1cm}|}
+\begin{tabular}{|>{\centering\arraybackslash}p{1.8cm}|p{4.5cm}|>{\centering\arraybackslash}p{1.4cm}|}
 \hline
-\textbf{Category} & \textbf{Attributes} & \textbf{Exp Applied} \\
+\textbf{Category} & \textbf{Attributes} & \textbf{Experiments Applied} \\
 \hline
 Demographic Data & Age, Gender & Age Only \\
 \hline
@@ -476,20 +476,32 @@ Table~\ref{tab:normalization_comparison} presents an example comparison of featu
 \centering
 \caption{Comparison of Data Before and After Normalization}
 \label{tab:normalization_comparison}
-\begin{tabular}{|>{\centering\arraybackslash}p{1.73cm}|>{\centering\arraybackslash}p{1.73cm}|>{\centering\arraybackslash}p{0.95cm}|>{\centering\arraybackslash}p{0.9cm}}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Attribute} & \textbf{Without Normalization} & \textbf{Standard Scaler} & \textbf{MinMax Scaler} \\ \hline
-
-Age (Years) & 26 & 0.03 & 0.33 \\ \hline
-Temperature ($^\circ$C) & 36.7 & -1.15 & 0.18 \\ \hline
-Systolic Blood Pressure & 100 & 0.05 & 0.40 \\ \hline
-Diastolic Blood Pressure & 70 & 0.30 & 0.25 \\ \hline
-Platelet & 139000 & -0.33 & 0.05 \\ \hline
-Leukocyte & 4500 & -0.64 & 0.07 \\ \hline
-Hematocrit & 26.7 & -1.63 & 0.29 \\ \hline
-Hemoglobin & 13.5 & -0.30 & 0.63 \\ \hline
-Fever Duration (Days) & 5 & 1.43 & 0.71 \\ \hline
+\textbf{Attribute} & \textbf{Unit} & \textbf{Without} & \textbf{Standard} & \textbf{MinMax} \\
+ & & \textbf{Normalization} & \textbf{Scaler} & \textbf{Scaler} \\
+\hline
+Age & Years & 26 & 0.03 & 0.33 \\
+\hline
+Temperature & $^\circ$C & 36.7 & -1.15 & 0.18 \\
+\hline
+Systolic Blood Pressure & mmHg & 100 & 0.05 & 0.40 \\
+\hline
+Diastolic Blood Pressure & mmHg & 70 & 0.30 & 0.25 \\
+\hline
+Platelet & cells/$\mu$L & 139000 & -0.33 & 0.05 \\
+\hline
+Leukocyte & cells/$\mu$L & 4500 & -0.64 & 0.07 \\
+\hline
+Hematocrit & \% & 26.7 & -1.63 & 0.29 \\
+\hline
+Hemoglobin & g/dL & 13.5 & -0.30 & 0.63 \\
+\hline
+Fever Duration & Days & 5 & 1.43 & 0.71 \\
+\hline
 \end{tabular}
+}
 \end{table}
 
 \begin{table}[H]
@@ -555,13 +567,9 @@ To further evaluate the classification capability of the proposed Deep Neural Ne
 \label{fig_roc}
 \end{figure}
 
-Fig.~\ref{fig_cm} and Fig.~\ref{fig_roc} present the classification performance comparison using Confusion Matrix and ROC Curve analysis for different normalization methods.
+Fig.~\ref{fig_cm} and Fig.~\ref{fig_roc} present the classification performance comparison using Confusion Matrix and ROC Curve analysis for different normalization methods. The confusion matrix results show that experiments without normalization produced a higher number of misclassifications, particularly in detecting positive Dengue Fever cases. In contrast, both \textit{StandardScaler} and \textit{MinMaxScaler} significantly improved prediction accuracy by reducing false classifications. Among all methods, \textit{StandardScaler} achieved the best classification results with the highest number of correctly predicted samples.
 
-The confusion matrix results show that experiments without normalization produced a higher number of misclassifications, particularly in detecting positive Dengue Fever cases. In contrast, both \textit{StandardScaler} and \textit{MinMaxScaler} significantly improved prediction accuracy by reducing false classifications. Among all methods, \textit{StandardScaler} achieved the best classification results with the highest number of correctly predicted samples.
-
-Similarly, the ROC Curve analysis demonstrates that normalization substantially improved the classification capability of the proposed Deep Neural Network model. The model without normalization achieved a relatively low AUC value of 0.6060, while \textit{StandardScaler} and \textit{MinMaxScaler} achieved significantly higher AUC values of 0.9972 and 0.9920, respectively.
-
-These findings confirm that normalization plays an important role in improving model sensitivity, specificity, and overall classification performance for Dengue Fever prediction.
+Similarly, the ROC Curve analysis demonstrates that normalization substantially improved the classification capability of the proposed Deep Neural Network model. The model without normalization achieved a relatively low AUC value of 0.6060, while \textit{StandardScaler} and \textit{MinMaxScaler} achieved significantly higher AUC values of 0.9972 and 0.9920, respectively. These findings confirm that normalization plays an important role in improving model sensitivity, specificity, and overall classification performance for Dengue Fever prediction.
 
 % =====================================================
 % DISCUSSION
@@ -595,9 +603,7 @@ The implementation of 5-Fold Cross Validation also confirmed that the proposed m
 
 \section{Future Work}
 
-Future studies may improve the proposed framework by utilizing larger and more diverse clinical datasets collected from multiple healthcare institutions. Additional experiments using more advanced Deep Learning architectures such as CNN, LSTM, or hybrid models may also enhance classification performance.
-
-Furthermore, future research can focus on integrating the proposed model into real-time healthcare applications or web-based systems to support early Dengue Fever screening and clinical decision-making processes.
+Future studies may improve the proposed framework by utilizing larger and more diverse clinical datasets collected from multiple healthcare institutions. Additional experiments using more advanced Deep Learning architectures such as CNN, LSTM, or hybrid models may also enhance classification performance. Furthermore, future research can focus on integrating the proposed model into real-time healthcare applications or web-based systems to support early Dengue Fever screening and clinical decision-making processes.
 
 % =====================================================
 % ACKNOWLEDGMENT
