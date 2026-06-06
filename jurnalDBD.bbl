@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,111 +23,176 @@
 
 \bibitem{b1}
 \BIBentryALTinterwordspacing
-{World Health Organization}, ``Dengue and severe dengue,'' 2024. [Online]. Available: \url{https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue}
+{World Health Organization}, ``Dengue and severe dengue,'' 2024. [Online].
+  Available:
+  \url{https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b2}
-D.~J. Gubler, ``Dengue and dengue hemorrhagic fever,'' \emph{Clinical Microbiology Reviews}, vol.~11, no.~3, pp. 480--496, 1998.
+D.~J. Gubler, ``Dengue and dengue hemorrhagic fever,'' \emph{Clinical
+  Microbiology Reviews}, vol.~11, no.~3, pp. 480--496, 1998.
 
 \bibitem{b3}
-S.~Bhatt \emph{et~al.}, ``The global distribution and burden of dengue,'' \emph{Nature}, vol. 496, no. 7446, pp. 504--507, 2013.
+S.~Bhatt \emph{et~al.}, ``The global distribution and burden of dengue,''
+  \emph{Nature}, vol. 496, no. 7446, pp. 504--507, 2013.
 
 \bibitem{b4}
-J.~Farrar \emph{et~al.}, \emph{Dengue: Guidelines for Diagnosis, Treatment, Prevention and Control}.\hskip 1em plus 0.5em minus 0.4em\relax World Health Organization, 2009.
+J.~Farrar \emph{et~al.}, \emph{Dengue: Guidelines for Diagnosis, Treatment,
+  Prevention and Control}.\hskip 1em plus 0.5em minus 0.4em\relax World Health
+  Organization, 2009.
 
 \bibitem{b5}
-D.~Ravi \emph{et~al.}, ``Deep learning for health informatics,'' \emph{IEEE Journal of Biomedical and Health Informatics}, vol.~21, no.~1, pp. 4--21, 2017.
+D.~Ravi \emph{et~al.}, ``Deep learning for health informatics,'' \emph{IEEE
+  Journal of Biomedical and Health Informatics}, vol.~21, no.~1, pp. 4--21,
+  2017.
 
 \bibitem{b6}
-A.~Esteva, B.~Kuprel, R.~A. Novoa \emph{et~al.}, ``Dermatologist-level classification of skin cancer with deep neural networks,'' \emph{Nature}, vol. 542, no. 7639, pp. 115--118, 2017.
+A.~Esteva, B.~Kuprel, R.~A. Novoa \emph{et~al.}, ``Dermatologist-level
+  classification of skin cancer with deep neural networks,'' \emph{Nature},
+  vol. 542, no. 7639, pp. 115--118, 2017.
 
 \bibitem{b7}
-Y.~LeCun, Y.~Bengio, and G.~Hinton, ``Deep learning,'' \emph{Nature}, vol. 521, no. 7553, pp. 436--444, 2015.
+Y.~LeCun, Y.~Bengio, and G.~Hinton, ``Deep learning,'' \emph{Nature}, vol. 521,
+  no. 7553, pp. 436--444, 2015.
 
 \bibitem{b8}
-V.~Ramasamy, S.~Vadivel \emph{et~al.}, ``An optimal feature selection with neural network-based classification model for dengue fever prediction,'' \emph{2023 6th International Conference on Information Systems and Computer Networks (ISCON)}, pp. 1--5, 2023.
+V.~Ramasamy, S.~Vadivel \emph{et~al.}, ``An optimal feature selection with
+  neural network-based classification model for dengue fever prediction,''
+  \emph{2023 6th International Conference on Information Systems and Computer
+  Networks (ISCON)}, pp. 1--5, 2023.
 
 \bibitem{b9}
-B.~Abdualgalil, S.~Abraham, and W.~Ismael, ``Early diagnosis for dengue disease prediction using efficient machine learning techniques based on clinical data,'' \emph{Healthcare}, vol.~11, no.~4, 2023.
+B.~Abdualgalil, S.~Abraham, and W.~Ismael, ``Early diagnosis for dengue disease
+  prediction using efficient machine learning techniques based on clinical
+  data,'' \emph{Healthcare}, vol.~11, no.~4, 2023.
 
 \bibitem{b10}
-S.~Garcia \emph{et~al.}, ``Data preprocessing in data mining,'' in \emph{Intelligent Systems Reference Library}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2015, vol.~72, pp. 1--45.
+S.~Garcia \emph{et~al.}, ``Data preprocessing in data mining,'' in
+  \emph{Intelligent Systems Reference Library}.\hskip 1em plus 0.5em minus
+  0.4em\relax Springer, 2015, vol.~72, pp. 1--45.
 
 \bibitem{b11}
-R.~Kohavi, ``A study of cross-validation and bootstrap for accuracy estimation and model selection,'' \emph{International Joint Conference on Artificial Intelligence (IJCAI)}, pp. 1137--1143, 1995.
+R.~Kohavi, ``A study of cross-validation and bootstrap for accuracy estimation
+  and model selection,'' \emph{International Joint Conference on Artificial
+  Intelligence (IJCAI)}, pp. 1137--1143, 1995.
 
 \bibitem{b12}
-T.~Hastie, R.~Tibshirani, and J.~Friedman, \emph{The Elements of Statistical Learning}, 2nd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2009.
+T.~Hastie, R.~Tibshirani, and J.~Friedman, \emph{The Elements of Statistical
+  Learning}, 2nd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2009.
 
 \bibitem{b13}
-D.~C. Andrade~Girón, W.~J. Marín~Rodriguez, F.~d.~M. Lioo-Jordan, and J.~L. Ausejo~Sánchez, ``Machine learning and deep learning models for dengue diagnosis prediction: A systematic review,'' \emph{Informatics}, 2025.
+D.~C. Andrade~Girón, W.~J. Marín~Rodriguez, F.~d.~M. Lioo-Jordan, and J.~L.
+  Ausejo~Sánchez, ``Machine learning and deep learning models for dengue
+  diagnosis prediction: A systematic review,'' \emph{Informatics}, 2025.
 
 \bibitem{b18}
-F.~Anibal and other, ``Dengue case forecasting using multi-step deep learning models with attention layers,'' \emph{International Journal of Electrical and Computer Engineering Systems}, 2023.
+F.~Anibal and other, ``Dengue case forecasting using multi-step deep learning
+  models with attention layers,'' \emph{International Journal of Electrical and
+  Computer Engineering Systems}, 2023.
 
 \bibitem{b20}
-V.~Ramasamy, S.~Vadivel, S.~Kothandapani, J.~Mahilraj, P.~Sivaram, and B.~Sharma, ``An optimal feature selection with neural network-based classification model for dengue fever prediction,'' pp. 1--5, 2023.
+V.~Ramasamy, S.~Vadivel, S.~Kothandapani, J.~Mahilraj, P.~Sivaram, and
+  B.~Sharma, ``An optimal feature selection with neural network-based
+  classification model for dengue fever prediction,'' pp. 1--5, 2023.
 
 \bibitem{b14}
-D.~Ravi, C.~Wong, F.~Deligianni \emph{et~al.}, ``Deep learning for health informatics,'' \emph{IEEE Journal of Biomedical and Health Informatics}, vol.~21, no.~1, pp. 4--21, 2017.
+D.~Ravi, C.~Wong, F.~Deligianni \emph{et~al.}, ``Deep learning for health
+  informatics,'' \emph{IEEE Journal of Biomedical and Health Informatics},
+  vol.~21, no.~1, pp. 4--21, 2017.
 
 \bibitem{b16}
-V.~Ramasamy, S.~Vadivel, S.~Kothandapani, J.~Mahilraj, S.~Ponnusamy, and B.~Sharma, ``An optimal feature selection with neural network-based classification model for dengue fever prediction,'' pp. 1--5, 03 2023.
+V.~Ramasamy, S.~Vadivel, S.~Kothandapani, J.~Mahilraj, S.~Ponnusamy, and
+  B.~Sharma, ``An optimal feature selection with neural network-based
+  classification model for dengue fever prediction,'' pp. 1--5, 03 2023.
 
 \bibitem{b15}
-Hamdani and other, ``Dengue classification method using support vector machines and cross-validation techniques,'' \emph{IAES International Journal of Artificial Intelligence}, 2022.
+Hamdani and other, ``Dengue classification method using support vector machines
+  and cross-validation techniques,'' \emph{IAES International Journal of
+  Artificial Intelligence}, 2022.
 
 \bibitem{b19}
-B.~Behera, G.~Kumaravelan, and P.~Borugadda, ``Performance evaluation of deep learning algorithms in biomedical document classification,'' pp. 220--224, 12 2019.
+B.~Behera, G.~Kumaravelan, and P.~Borugadda, ``Performance evaluation of deep
+  learning algorithms in biomedical document classification,'' pp. 220--224, 12
+  2019.
 
 \bibitem{b17}
 \BIBentryALTinterwordspacing
-H.~Hamdani, Z.~Arifin, and A.~Septiarini, ``Expert system of dengue disease using artificial neural network classifier,'' \emph{JUITA: Jurnal Informatika}, 2022. [Online]. Available: \url{http://jurnalnasional.ump.ac.id/index.php/JUITA/article/view/12476}
+H.~Hamdani, Z.~Arifin, and A.~Septiarini, ``Expert system of dengue disease
+  using artificial neural network classifier,'' \emph{JUITA: Jurnal
+  Informatika}, 2022. [Online]. Available:
+  \url{http://jurnalnasional.ump.ac.id/index.php/JUITA/article/view/12476}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b22}
 \BIBentryALTinterwordspacing
-T.~Xu and G.~Xiao, ``Deep learning-based predictive modeling of dengue fever incidence in southeast asia,'' \emph{International Journal of Infectious Diseases}, vol. 167, p. 108592, 2026. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S1201971226002274}
+T.~Xu and G.~Xiao, ``Deep learning-based predictive modeling of dengue fever
+  incidence in southeast asia,'' \emph{International Journal of Infectious
+  Diseases}, vol. 167, p. 108592, 2026. [Online]. Available:
+  \url{https://www.sciencedirect.com/science/article/pii/S1201971226002274}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b24}
 \BIBentryALTinterwordspacing
-B.~Abdualgalil, S.~Abraham, and W.~M.~Ismael, ``Early diagnosis for dengue disease prediction using efficient machine learning techniques based on clinical data,'' \emph{Healthcare}, 2023. [Online]. Available: \url{https://journal.umy.ac.id/index.php/jrc/article/view/14387}
+B.~Abdualgalil, S.~Abraham, and W.~M.~Ismael, ``Early diagnosis for dengue
+  disease prediction using efficient machine learning techniques based on
+  clinical data,'' \emph{Healthcare}, 2023. [Online]. Available:
+  \url{https://journal.umy.ac.id/index.php/jrc/article/view/14387}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b21}
-F.~Cholet, \emph{Deep Learning with Python for Medical Data Classification}.\hskip 1em plus 0.5em minus 0.4em\relax Manning Publications, 2017.
+F.~Cholet, \emph{Deep Learning with Python for Medical Data
+  Classification}.\hskip 1em plus 0.5em minus 0.4em\relax Manning Publications,
+  2017.
 
 \bibitem{b26}
-A.~G{\'e}ron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, 2022.
+A.~G{\'e}ron, \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and
+  TensorFlow}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media,
+  2022.
 
 \bibitem{b27}
-S.~learn Developers, ``Minmaxscaler documentation,'' \url{https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler. html}, 2024, accessed: 2026-05-30.
+S.~learn Developers, ``Minmaxscaler documentation,''
+  \url{https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.
+  html}, 2024, accessed: 2026-05-30.
 
 \bibitem{b28}
 \BIBentryALTinterwordspacing
-I.~Goodfellow, Y.~Bengio, and A.~Courville, \emph{Deep Learning}.\hskip 1em plus 0.5em minus 0.4em\relax MIT Press, 2016. [Online]. Available: \url{https://www.deeplearningbook.org/}
+I.~Goodfellow, Y.~Bengio, and A.~Courville, \emph{Deep Learning}.\hskip 1em
+  plus 0.5em minus 0.4em\relax MIT Press, 2016. [Online]. Available:
+  \url{https://www.deeplearningbook.org/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b29}
 \BIBentryALTinterwordspacing
-V.~Nair and G.~E. Hinton, ``Rectified linear units improve restricted boltzmann machines,'' in \emph{Proceedings of the 27th International Conference on Machine Learning}, 2010, pp. 807--814. [Online]. Available: \url{https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf}
+V.~Nair and G.~E. Hinton, ``Rectified linear units improve restricted boltzmann
+  machines,'' in \emph{Proceedings of the 27th International Conference on
+  Machine Learning}, 2010, pp. 807--814. [Online]. Available:
+  \url{https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b30}
 \BIBentryALTinterwordspacing
-N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov, ``Dropout: A simple way to prevent neural networks from overfitting,'' \emph{Journal of Machine Learning Research}, vol.~15, no.~56, pp. 1929--1958, 2014. [Online]. Available: \url{https://jmlr.org/papers/v15/srivastava14a.html}
+N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov,
+  ``Dropout: A simple way to prevent neural networks from overfitting,''
+  \emph{Journal of Machine Learning Research}, vol.~15, no.~56, pp. 1929--1958,
+  2014. [Online]. Available:
+  \url{https://jmlr.org/papers/v15/srivastava14a.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b31}
 \BIBentryALTinterwordspacing
-C.~M. Bishop, ``Pattern recognition and machine learning,'' \emph{Springer}, 2006. [Online]. Available: \url{https://link.springer.com/book/10.1007/978-0-387-45528-0}
+C.~M. Bishop, ``Pattern recognition and machine learning,'' \emph{Springer},
+  2006. [Online]. Available:
+  \url{https://link.springer.com/book/10.1007/978-0-387-45528-0}
 \BIBentrySTDinterwordspacing
 
 \bibitem{b34}
-D.~M.~W. Powers, ``Evaluation: From precision, recall and f-measure to roc, informedness, markedness and correlation,'' \emph{Journal of Machine Learning Technologies}, vol.~2, no.~1, pp. 37--63, 2011.
+D.~M.~W. Powers, ``Evaluation: From precision, recall and f-measure to roc,
+  informedness, markedness and correlation,'' \emph{Journal of Machine Learning
+  Technologies}, vol.~2, no.~1, pp. 37--63, 2011.
 
 \bibitem{b35}
-M.~Sokolova and G.~Lapalme, ``A systematic analysis of performance measures for classification tasks,'' \emph{Information Processing and Management}, vol.~45, no.~4, pp. 427--437, 2009.
+M.~Sokolova and G.~Lapalme, ``A systematic analysis of performance measures for
+  classification tasks,'' \emph{Information Processing and Management},
+  vol.~45, no.~4, pp. 427--437, 2009.
 
 \end{thebibliography}
