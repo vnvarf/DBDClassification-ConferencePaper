@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.12)  4 JUN 2026 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.12)  21 JUL 2026 18:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -306,99 +306,78 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 57.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
+) [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
 <workflow.png, id=10, 331.2375pt x 437.635pt>
 File: workflow.png Graphic file (type png)
 <use workflow.png>
-Package pdftex.def Info: workflow.png  used on input line 121.
+Package pdftex.def Info: workflow.png  used on input line 80.
 (pdftex.def)             Requested size: 206.39685pt x 272.69316pt.
 
-Underfull \vbox (badness 1242) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1242) has occurred while \output is active []
-
- [2 <./workflow.png>]
-Overfull \hbox (3.71782pt too wide) in paragraph at lines 145--146
+Overfull \hbox (3.71782pt too wide) in paragraph at lines 96--97
  []|\OT1/ptm/b/n/8 Experiments 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 []|\OT1/ptm/m/n/8 Platelet, Leuko-cyte, Hema-t-ocrit,
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 153--153
+Underfull \hbox (badness 5832) in paragraph at lines 104--104
 \OT1/ptm/m/n/8 Body Pain, Ab-dom-i-nal Dis-ten-sion,
  []
 
 
-Overfull \hbox (4.6861pt too wide) in paragraph at lines 143--157
+Overfull \hbox (4.6861pt too wide) in paragraph at lines 94--108
  [][] 
  []
 
-
-Overfull \hbox (6.46555pt too wide) in paragraph at lines 187--197
- [][] 
- []
-
+[2 <./workflow.png>]
 <Experiments Flow.png, id=16, 631.35875pt x 375.4025pt>
 File: Experiments Flow.png Graphic file (type png)
 <use Experiments Flow.png>
-Package pdftex.def Info: Experiments Flow.png  used on input line 245.
-(pdftex.def)             Requested size: 232.19843pt x 138.06616pt.
-
-Underfull \vbox (badness 2065) has occurred while \output is active []
-
- [3] [4 <./Experiments Flow.png>]
-<training acc&loss.png, id=29, 1101.11375pt x 371.3875pt>
+Package pdftex.def Info: Experiments Flow.png  used on input line 137.
+(pdftex.def)             Requested size: 216.71906pt x 128.86098pt.
+ [3 <./Experiments Flow.png>]
+<training acc&loss.png, id=26, 1101.11375pt x 371.3875pt>
 File: training acc&loss.png Graphic file (type png)
 <use training acc&loss.png>
-Package pdftex.def Info: training acc&loss.png  used on input line 454.
-(pdftex.def)             Requested size: 247.6778pt x 83.5359pt.
-<normalization_comparison.png, id=30, 1102.1175pt x 493.845pt>
+Package pdftex.def Info: training acc&loss.png  used on input line 272.
+(pdftex.def)             Requested size: 237.36346pt x 80.05643pt.
+<normalization_comparison.png, id=27, 1102.1175pt x 493.845pt>
 File: normalization_comparison.png Graphic file (type png)
 <use normalization_comparison.png>
-Package pdftex.def Info: normalization_comparison.png  used on input line 533.
-(pdftex.def)             Requested size: 247.6778pt x 110.97469pt.
-<cv_comparison.png, id=31, 1098.1025pt x 490.83376pt>
-File: cv_comparison.png Graphic file (type png)
-<use cv_comparison.png>
-Package pdftex.def Info: cv_comparison.png  used on input line 540.
-(pdftex.def)             Requested size: 247.6778pt x 110.70244pt.
- [5 <./training acc&loss.png> <./normalization_comparison.png> <./cv_comparison.png>]
-<confusion_matrix.png, id=40, 1102.1175pt x 356.33125pt>
+Package pdftex.def Info: normalization_comparison.png  used on input line 343.
+(pdftex.def)             Requested size: 237.36346pt x 106.35545pt.
+ [4 <./training acc&loss.png> <./normalization_comparison.png>]
+<confusion_matrix.png, id=35, 1102.1175pt x 356.33125pt>
 File: confusion_matrix.png Graphic file (type png)
 <use confusion_matrix.png>
-Package pdftex.def Info: confusion_matrix.png  used on input line 558.
-(pdftex.def)             Requested size: 247.6778pt x 80.0732pt.
-<ROC.png, id=41, 736.7525pt x 512.91624pt>
+Package pdftex.def Info: confusion_matrix.png  used on input line 358.
+(pdftex.def)             Requested size: 237.36346pt x 76.7402pt.
+<ROC.png, id=36, 736.7525pt x 512.91624pt>
 File: ROC.png Graphic file (type png)
 <use ROC.png>
-Package pdftex.def Info: ROC.png  used on input line 565.
-(pdftex.def)             Requested size: 247.6778pt x 172.42477pt.
- [6 <./confusion_matrix.png> <./ROC.png>] (./jurnalDBD.bbl
-Underfull \hbox (badness 1565) in paragraph at lines 104--105
+Package pdftex.def Info: ROC.png  used on input line 365.
+(pdftex.def)             Requested size: 237.36346pt x 165.24791pt.
+ [5 <./confusion_matrix.png> <./ROC.png>] (./jurnalDBD.bbl
+Underfull \hbox (badness 1565) in paragraph at lines 101--102
 []\OT1/ptm/m/n/8 S. learn De-vel-op-ers, ``Min-maxs-caler doc-u-men-ta-tion,'' https://scikit-
  []
 
 
-Overfull \hbox (1.69339pt too wide) in paragraph at lines 104--105
+Overfull \hbox (1.69339pt too wide) in paragraph at lines 101--102
 \OT1/ptm/m/n/8 learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.
  []
 
@@ -414,25 +393,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (./jurnalDBD.aux)
+[6] (./jurnalDBD.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4514 strings out of 467525
- 71063 string characters out of 5418982
- 499558 words of memory out of 5000000
- 33371 multiletter control sequences out of 15000+600000
- 671381 words of font info for 127 fonts, out of 8000000 for 9000
+ 4497 strings out of 467525
+ 70777 string characters out of 5418982
+ 500492 words of memory out of 5000000
+ 33355 multiletter control sequences out of 15000+600000
+ 670274 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,11n,74p,1921b,348s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 58i,11n,74p,1634b,348s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on jurnalDBD.pdf (7 pages, 1456902 bytes).
+Output written on jurnalDBD.pdf (6 pages, 1335339 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

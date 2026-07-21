@@ -16,45 +16,45 @@ Warning--empty journal in b16
 Warning--empty journal in b19
 
 Done.
-You've used 31 entries,
+You've used 26 entries,
             4087 wiz_defined-function locations,
-            993 strings with 12002 characters,
-and the built_in function-call counts, 20163 in all, are:
-= -- 1660
-> -- 444
-< -- 151
-+ -- 235
-- -- 79
-* -- 952
-:= -- 3215
-add.period$ -- 63
-call.type$ -- 31
-change.case$ -- 29
-chr.to.int$ -- 336
-cite$ -- 34
-duplicate$ -- 1500
-empty$ -- 1626
-format.name$ -- 102
-if$ -- 4644
+            962 strings with 11170 characters,
+and the built_in function-call counts, 16775 in all, are:
+= -- 1392
+> -- 363
+< -- 126
++ -- 193
+- -- 65
+* -- 788
+:= -- 2687
+add.period$ -- 53
+call.type$ -- 26
+change.case$ -- 25
+chr.to.int$ -- 273
+cite$ -- 29
+duplicate$ -- 1260
+empty$ -- 1334
+format.name$ -- 84
+if$ -- 3855
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 250
-newline$ -- 132
-num.names$ -- 31
-pop$ -- 588
+int.to.str$ -- 26
+missing$ -- 210
+newline$ -- 109
+num.names$ -- 26
+pop$ -- 483
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1556
+skip$ -- 1292
 stack$ -- 0
-substring$ -- 796
-swap$ -- 1144
-text.length$ -- 39
+substring$ -- 659
+swap$ -- 965
+text.length$ -- 35
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 31
+type$ -- 26
 warning$ -- 3
-while$ -- 95
-width$ -- 33
-write$ -- 325
+while$ -- 81
+width$ -- 28
+write$ -- 271
 (There were 3 warnings)

@@ -22,27 +22,11 @@
 
 \begin{document}
 
-% =====================================================
-% TITLE
-% =====================================================
-
 \title{
 A Comparative Analysis of StandardScaler and MinMaxScaler Normalization for Deep Neural Network-Based Dengue Fever Classification
 }
 
-% =====================================================
-% AUTHOR
-% =====================================================
-
 \author{
-
-% \IEEEauthorblockN{Ramadhani Vanva Fauzia}
-% \IEEEauthorblockA{
-% \textit{Information Systems Department} \\
-% \textit{Telkom University Surabaya} \\
-% Surabaya, Indonesia \\
-% Ramadhanivanva@student.telkomuniversity.ac.id
-% }
 \IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
 \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
 \textit{name of organization (of Aff.)}\\
@@ -50,27 +34,14 @@ City, Country \\
 email address or ORCID}
 }
 
-% =====================================================
-% TITLE AREA
-% =====================================================
-
 \maketitle
 
-% =====================================================
-% ABSTRACT
-% =====================================================
-
 \begin{abstract}
-
-Dengue Fever remains one of the major infectious diseases in tropical and subtropical regions, requiring accurate and early diagnosis to reduce complications and mortality. This study proposes a Deep Neural Network (DNN)-based classification framework for Dengue Fever prediction using clinical symptoms and laboratory examination data, with a primary focus on analyzing the impact of normalization techniques on classification performance. The clinical dataset used in this study contains heterogeneous attributes with significantly different numerical ranges, such as platelet count, leukocyte count, hematocrit, hemoglobin, body temperature, and blood pressure, making it challenging to be processed directly by Deep Learning models. Variations in feature scales may negatively affect model stability and classification accuracy, making normalization an important preprocessing step. Three normalization methods, namely no normalization, StandardScaler, and MinMaxScaler, were evaluated using two dataset configurations: a complete dataset and a symptoms-only dataset. Furthermore, 5-Fold Cross Validation was implemented to assess model stability and generalization capability. Experimental results demonstrate that normalization significantly improved classification performance compared to non-normalized data. Among all evaluated methods, StandardScaler achieved the best performance, obtaining an accuracy of 96.96\% and an AUC value of 0.9972 on the complete dataset. These findings confirm that normalization plays a crucial role in improving model convergence, training stability, and classification performance for heterogeneous clinical datasets, while the proposed framework shows promising potential for supporting early Dengue Fever prediction and intelligent healthcare decision support systems.
+Dengue Hemorrhagic Fever (DHF) remains a major public health problem in tropical and subtropical regions, making rapid and accurate diagnosis crucial to reduce complications and mortality. Clinical datasets used for DHF classification contain various numerical features with varying value ranges, which can impact the performance of deep learning models. Although data normalization has been widely used in preprocessing, studies comparing the effectiveness of various normalization techniques for DHF classification are limited. This study analyzes the effect of three normalization approaches—no normalization, StandardScaler, and MinMaxScaler—on the performance of a Deep Neural Network (DNN) model using two dataset configurations: a complete dataset containing clinical symptoms and laboratory test results, and a dataset containing only clinical symptoms for an initial screening scenario. Model performance was evaluated using Stratified 5-Fold Cross Validation, and the final model was tested on a separate test dataset. The results showed that data normalization significantly improved classification performance. Among the evaluated methods, StandardScaler performed best on the full dataset with an accuracy of 96.96\%, an F1-score of 97.00\%, and an ROC-AUC of 0.9972. These findings suggest that selecting the right normalization technique can improve the accuracy, reliability, and stability of deep learning-based dengue fever classification models in processing heterogeneous clinical data.
 \end{abstract}
 
-% =====================================================
-% KEYWORDS
-% =====================================================
-
 \begin{IEEEkeywords}
-Deep Neural Network, Dengue Fever, Classification, Normalization, StandardScaler, MinMaxScaler, Cross Validation
+Dengue Hemorrhagic Fever, Deep Neural Network, Data Normalization, StandardScaler, Clinical Data Classification
 \end{IEEEkeywords}
 
 % =====================================================
@@ -79,13 +50,11 @@ Deep Neural Network, Dengue Fever, Classification, Normalization, StandardScaler
 
 \section{Introduction}
 
-Dengue Hemorrhagic Fever (DHF) remains one of the most prevalent infectious diseases in tropical and subtropical regions worldwide. Transmitted primarily through infected \textit{Aedes aegypti} mosquitoes, dengue continues to pose a major public health challenge, particularly in developing countries with limited healthcare resources. According to the \textit{World Health Organization} (WHO), dengue cases have increased significantly over the past two decades, with an estimated 100--400 million infections annually, especially in Southeast Asia and Latin America \cite{b1}. Therefore, timely and accurate diagnosis is essential to reduce complications and mortality associated with DHF \cite{b2,b3}.
+Dengue Hemorrhagic Fever (DHF) remains a major health challenge, particularly for people in tropical and subtropical countries. This disease is transmitted through the bite of the Aedes aegypti mosquito, and the number of cases has continued to increase over the past two decades. According to the World Health Organization (WHO), an estimated 100–400 million cases of dengue fever occur annually worldwide, with Southeast Asia and Latin America being the most affected regions. \cite{b1}. Given that this disease can progress rapidly and cause serious complications, early and accurate diagnosis is crucial for improving patient success and reducing mortality. \cite{b2,b3}
 
-Dengue diagnosis is commonly performed using clinical symptoms and laboratory examinations, including platelet count, leukocyte count, hematocrit, and hemoglobin levels \cite{b4}. However, overlapping symptoms with other febrile diseases and the increasing volume of patient data often complicate the diagnostic process, potentially affecting the consistency and accuracy of clinical decisions. In recent years, \textit{Artificial Intelligence} (AI), particularly \textit{Machine Learning} (ML) and \textit{Deep Learning} (DL), has shown promising performance in medical classification and disease prediction due to its ability to learn complex patterns from healthcare data \cite{b5,b6}.
+In clinical practice, the diagnosis of dengue fever is generally based on a combination of patient symptoms and laboratory findings, such as platelet count, leukocyte count, hematocrit, and hemoglobin levels \cite{b4}. However, these clinical manifestations often overlap with other febrile illnesses, making diagnosis very difficult in the early stages of infection. To support clinical decision-making, Artificial Intelligence (AI), particularly Machine Learning (ML) and Deep Learning (DL), are increasingly being adopted for medical classification tasks due to their ability to identify complex relationships in healthcare data \cite{b5,b6}. Among these approaches, Deep Neural Networks (DNNs) have demonstrated strong performance in classifying structured clinical data \cite{b7,b8,b9}.
 
-Among various DL approaches, \textit{Deep Neural Network} (DNN) models have demonstrated strong performance in structured medical classification tasks \cite{b7}. Previous studies have successfully applied DNN and ML-based methods for dengue prediction using clinical and laboratory features \cite{b8,b9}. Nevertheless, the performance of Deep Learning models is highly dependent on data preprocessing quality, particularly feature normalization. Medical datasets often contain heterogeneous attributes with substantially different numerical ranges, such as platelet count, leukocyte count, temperature, and blood pressure, which may negatively affect model convergence and classification performance if processed directly \cite{b10}.
-
-Although normalization techniques have been applied in previous dengue classification studies, comparative analysis of their impact on DNN performance remains limited. Therefore, this study investigates the effect of different normalization methods on a DNN-based Dengue Fever classification model using \textit{complete} and \textit{symptoms-only} datasets. Three approaches, namely without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}, are evaluated, while \textit{K-Fold Cross Validation} is implemented to assess model stability and generalization capability \cite{b11}. Model performance is evaluated using Accuracy, Precision, Recall, F1-Score, and ROC-AUC metrics to support more reliable early Dengue Fever prediction.
+Despite these advances, the effectiveness of deep learning models is significantly affected by the quality of data preprocessing. Clinical datasets typically include heterogeneous numeric features with varying value ranges, which can slow model convergence and reduce predictive performance if not scaled \cite{b10}. Although feature normalization has been widely incorporated into previous dengue classification studies, relatively few have systematically compared different normalization techniques under multiple dataset configurations. To address this gap, this study evaluates three normalization strategies—no normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}—using DNNs trained on two dataset configurations: a full dataset containing clinical symptoms and laboratory results, and a symptom-only dataset. Model robustness and generalization were assessed using five-fold cross-validation, while classification performance was measured using Accuracy, Precision, Recall, F1-Score, and ROC-AUC \cite{b11}.
 
 % =====================================================
 % RELATED WORK
@@ -93,15 +62,11 @@ Although normalization techniques have been applied in previous dengue classific
 
 \section{Related Work}
 
-Previous studies have demonstrated that \textit{Machine Learning} (ML) and \textit{Deep Learning} (DL) approaches are effective for Dengue Fever classification and prediction. A systematic review conducted by Andrade Girón et al. \cite{b12} reported that various models, including \textit{Artificial Neural Network} (ANN), \textit{Convolutional Neural Network} (CNN), \textit{Random Forest}, \textit{Support Vector Machine} (SVM), and \textit{XGBoost}, have been widely applied for dengue diagnosis. The study also emphasized that preprocessing techniques, particularly normalization and \textit{K-Fold Cross Validation}, play an important role in improving model performance and generalization.
+Previous research has shown that both Machine Learning (ML) and Deep Learning (DL) are effective approaches for dengue classification. A systematic review by Andrade Girón et al. /cite{b12} highlighted the successful application of algorithms such as Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), Random Forest, Support Vector Machine (SVM), and Extreme Gradient Boosting (XGBoost). The review also emphasized that data preprocessing, particularly feature normalization and K-Fold Cross Validation, plays a key role in improving classification performance and model generalization. Similarly, previous research has shown that normalization methods, including Z-score and Min-Max Scaling, along with cross validation, contribute to higher classification accuracy and more reliable model performance \cite{b13,b17,b18,b20,b22}.
 
-Several studies have highlighted the importance of normalization and validation strategies in healthcare classification systems. Previous findings reported that normalization methods, such as \textit{Z-score normalization}, improve Deep Learning performance on biomedical datasets, while \textit{5-Fold} and \textit{10-Fold Cross Validation} help reduce overfitting and improve model reliability \cite{b13,b18,b20}. In addition, normalization techniques contribute to stabilizing the training process and improving model convergence.
+Several dengue classification studies have reported accuracy above 97\% using ANN and SVM models with appropriate preprocessing and validation strategies \cite{b14,b15,b16,b19}. Other comparative studies achieved accuracy exceeding 99\% using feature normalization combined with machine learning algorithms such as Extra Tree Classifier and Decision Tree \cite{b3,b24}. Similar findings have also been reported in Indonesia, where Min-Max Scaling improved the performance of an XGBoost-based dengue classification model \cite{b5}. Overall, these studies show that feature scaling and validation strategies substantially impact model accuracy and generalization \cite{b21}.
 
-In dengue classification research, both ML and DL methods have achieved promising performance using normalized clinical datasets. Hamdani et al. \cite{b14,b16} applied \textit{Support Vector Machine} (SVM) and \textit{Artificial Neural Network} (ANN) models with feature normalization and \textit{K-Fold Cross Validation}, achieving accuracies above 97\%. Similarly, Ramasamy et al. \cite{b15,b19} proposed a Neural Network model integrated with \textit{StandardScaler} normalization and feature optimization, achieving 97.1\% accuracy using \textit{5-Fold Cross Validation}. Other studies also reported that normalization techniques, including \textit{MinMaxScaler}, improved prediction reliability and consistency in dengue forecasting systems \cite{b17,b22}.
-
-Comparative studies involving multiple ML algorithms have also shown strong classification performance for dengue prediction. Abdualgalil et al. \cite{b3} employed \textit{Z-score normalization}, \textit{SMOTE+ENN} balancing, and \textit{10-Fold Cross Validation}, where the \textit{Extra Tree Classifier} achieved 99.03\% accuracy. Likewise, Sriyanto et al. \cite{b24} reported that \textit{Neural Network} and \textit{Decision Tree} models achieved the highest accuracy of 99.4\% using \textit{StandardScaler} normalization. In the Indonesian context, Dewi et al. \cite{b5} demonstrated that \textit{XGBoost} achieved the best performance with 85\% accuracy after applying \textit{Min-Max scaling}, while Xu and Xiao \cite{b21} emphasized the importance of feature scaling and validation techniques in improving model generalization.
-
-Although previous studies have demonstrated the benefits of normalization and \textit{Cross Validation} in dengue prediction, comparative analysis of multiple normalization methods under different dataset configurations for DNN-based Dengue Fever classification remains limited. Therefore, this study focuses on analyzing the impact of different normalization techniques and validation scenarios using both \textit{complete clinical-laboratory datasets} and \textit{symptoms-only datasets}.
+Although previous research has demonstrated the benefits of normalization, most studies have only evaluated one preprocessing technique or one dataset configuration. Comprehensive comparisons of different normalization methods for DNN-based dengue classification across different dataset configurations are rare. To address this limitation, this study systematically compares three normalization strategies using complete clinical-laboratory data and symptom-only datasets.
 
 % =====================================================
 % RESEARCH METHODOLOGY
@@ -109,13 +74,7 @@ Although previous studies have demonstrated the benefits of normalization and \t
 
 \section{Research Methodology}
 
-% =====================================================
-% WORKFLOW
-% =====================================================
-
 \subsection{Research Workflow}
-
-The research workflow was designed to evaluate the impact of normalization methods on the proposed Deep Neural Network (DNN) model for Dengue Fever classification, including preprocessing, normalization, model training, Cross Validation, and performance evaluation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.40\textwidth]{workflow.png}
@@ -123,19 +82,11 @@ The research workflow was designed to evaluate the impact of normalization metho
 \label{fig_workflow}
 \end{figure}
 
-Fig.~\ref{fig_workflow} illustrates the overall workflow used in this study. The process begins with collecting clinical symptom and laboratory examination datasets related to Dengue Fever. The collected data then undergoes preprocessing stages, including data cleaning, missing value handling, feature transformation, and normalization. After preprocessing, the dataset was divided into two dataset configurations, namely the complete dataset containing symptom and laboratory features and the symptoms-only dataset.
-
-Furthermore, normalization experiments were conducted using three approaches: without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}. Each experimental configuration was evaluated using a Deep Neural Network (DNN) model combined with 5-Fold Cross Validation to analyze model stability and generalization capability. Finally, model performance was evaluated using several classification metrics, including Accuracy, Precision, Recall, F1-Score, and ROC-AUC, to determine the most effective normalization approach for Dengue Fever classification.
-
-% =====================================================
-% DATASET
-% =====================================================
+Fig.~\ref{fig_workflow} presents the overall workflow of this study. Clinical symptom and laboratory data were first collected and preprocessed through data cleaning, missing value handling, and feature encoding. The processed data were then divided into two dataset configurations: a complete dataset containing both clinical symptoms and laboratory results, and a symptoms-only dataset representing early-stage screening scenarios. Each dataset configuration was evaluated using three normalization strategies: no normalization, Standard Scaling, and Min-Max Scaling. The normalized data were subsequently used to train a Deep Neural Network (DNN) with five-fold cross-validation. Finally, model performance was evaluated using Accuracy, Precision, Recall, F1-Score, and ROC-AUC to determine the most effective normalization strategy for dengue fever classification.
 
 \subsection{Dataset}
 
-The dataset used in this study consists of clinical data related to Dengue Fever (DF) patients, including demographic information, vital signs, laboratory examination results, and clinical symptoms. The dataset was collected to support the development of a Deep Neural Network (DNN)-based classification system for Dengue Fever prediction.
-
-Overall, the dataset contains 20 input features and 1 target label. The input features are categorized into demographic data, vital signs, laboratory examination features, and clinical symptoms. Meanwhile, the target label represents the diagnosis result used for the classification process.
+The dataset used in this study consists of clinical records collected from patients presenting with febrile illness. Each record includes demographic information, vital signs, clinical symptoms, laboratory examination results, and a diagnosis label indicating either Dengue Fever or non-dengue fever. In total, the dataset contains 21 input features and one target label, as summarized in Tables~\ref{tab_dataset_features} and \ref{tab_target_label}.
 
 \begin{table}[H]
 \caption{Input Feature Categories}
@@ -171,112 +122,38 @@ Clinical Symptoms & Fever, Fever Duration, Headache, Nausea, Vomiting, Abdominal
 \label{tab_target_label}
 \end{table}
 
-Normalization was applied only to numerical attributes with continuous values, including age, body temperature, blood pressure, laboratory examination results, and fever duration. Binary and categorical symptom features that had been transformed into numerical values (0 and 1) were not normalized because they already shared the same value range. The target label was also excluded from the normalization process since it represents the classification output of the proposed DNN model.
-
-% =====================================================
-% DATASET SCENARIO
-% =====================================================
-
-\subsection{Dataset Scenarios}
-
-This study used two dataset configurations to examine the impact of dataset composition on Deep Learning-based Dengue Fever classification. The first configuration employed a complete dataset consisting of demographic information, vital signs, laboratory examination results, and clinical symptoms. In contrast, the second configuration included only symptom-related features to simulate early Dengue Fever prediction in situations where laboratory test results are unavailable.
-
-\begin{table}[H]
-\caption{Dataset Configurations}
-\centering
-\begin{tabular}{|c|p{5.5cm}|}
-\hline
-\textbf{Dataset Configuration} & \textbf{Dataset Composition} \\
-\hline
-Dataset 1 & Demographic Data + Vital Signs + Clinical Symptoms + Laboratory Features \\
-\hline
-Dataset 2 & Demographic Data + Vital Signs + Clinical Symptoms \\
-\hline
-\end{tabular}
-\label{tab_scenario}
-\end{table}
-
-% =====================================================
-% PREPROCESSING
-% =====================================================
+This dataset consists of 1,141 patient medical records collected from Permata Gading Clinic between January 2024 and December 2025. The class distribution is relatively balanced, consisting of 575 non-dengue cases and 566 dengue cases; therefore, no additional resampling techniques, such as SMOTE, were applied. Normalization was performed only on continuous numeric features, including age, body temperature, systolic and diastolic blood pressure, laboratory measurements, and fever duration. Binary variables representing clinical symptoms, gender, and target label were excluded from the normalization process because their values already represent categorical information.
 
 \subsection{Data Preprocessing}
 
-Data preprocessing was conducted to prepare the dataset before the Deep Learning training process. This stage aims to improve data quality and ensure that all features can be processed effectively by the model.
+Data preprocessing was performed to improve data quality before model training. Duplicate data was removed, while missing values for numeric and categorical attributes were filled using the median input method. Next, categorical variables, such as gender, clinical symptoms, and diagnostic labels, were converted to binary values for processing by the Deep Neural Network (DNN) model. All 21 features were retained due to their clinical relevance to dengue diagnosis.
 
-\begin{itemize}
-
-\item \textbf{Data Cleaning}
-
-The dataset was examined to identify duplicated, inconsistent, and incomplete records. Duplicate data were removed to reduce bias and improve model reliability.
-
-\item \textbf{Missing Value Handling}
-
-Missing values in numerical attributes such as temperature, platelet count, leukocyte count, hematocrit, and hemoglobin were handled using mean imputation. Meanwhile, categorical attributes were filled using mode imputation to maintain dataset consistency.
-
-\item \textbf{Data Transformation}
-
-Categorical attributes such as symptoms, gender, and diagnosis labels were transformed into numerical values using binary encoding. Positive responses were represented as 1, while negative responses were represented as 0.
-
-\item \textbf{Data Normalization}
-
-Feature normalization was applied to reduce differences in numerical ranges among attributes. In this study, three normalization methods were evaluated, namely without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}.
-
-\item \textbf{Feature Selection}
-
-Feature selection was performed based on medical relevance and correlation analysis. All selected features were retained because they showed significant contribution to Dengue Fever classification.
-
-\item \textbf{Data Splitting}
-
-The dataset was divided into training and testing data using an 80:20 ratio. The training data were used for model learning, while the testing data were used for performance evaluation.
-
-\end{itemize}
-
-% =====================================================
-% NORMALIZATION
-% =====================================================
+After preprocessing, the dataset was split into training-validation and testing data with an 80:20 ratio using stratified sampling. The training process was performed using five-fold stratified cross-validation to evaluate the model's stability and generalization ability. Next, the final model was retrained using the entire training-validation data with an 85:15 internal split for early stopping. It was then evaluated on a held-out test set to obtain more objective results and minimize selection bias.
 
 \subsection{Normalization Experiments}
 
-Normalization experiments were conducted to evaluate the effect of feature scaling on the performance of the proposed Deep Neural Network (DNN) model. Since the dataset contains numerical attributes with different value ranges, normalization was applied to improve training stability and classification performance.
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textwidth]{Experiments Flow.png}
+\includegraphics[width=0.42\textwidth]{Experiments Flow.png}
 \caption{Normalization Experiment Framework}
 \label{fig_norm_framework}
 \end{figure}
 
-Fig.~\ref{fig_norm_framework} illustrates the experimental framework used in this study. Three normalization methods, namely without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}, were applied to two dataset configurations: the complete dataset and the symptoms-only dataset. Each configuration was evaluated using the proposed Deep Neural Network model to analyze the effect of feature scaling on classification performance.
+Fig.~\ref{fig_norm_framework} illustrates the experimental framework adopted in this study. Two dataset configurations were evaluated: the complete dataset, which includes both clinical symptoms and laboratory examination results, and the symptoms-only dataset, which excludes laboratory features to simulate an early screening scenario. Each dataset configuration was tested using three normalization strategies, namely no normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}, resulting in six experimental scenarios.
 
-\begin{itemize}
-
-\item \textbf{Without Normalization}
-
-The original dataset was directly used without applying any feature scaling process.
-
-\item \textbf{StandardScaler}
-
-\textit{StandardScaler} transforms the data into a standard normal distribution with a mean of 0 and a standard deviation of 1 \cite{b26}. The normalization process is calculated using the following equation:
+\textit{StandardScaler} standardizes numerical features by transforming them to have zero mean and unit variance,
 
 \begin{equation}
-z = \frac{x - \mu}{\sigma}
+z=\frac{x-\mu}{\sigma},
 \end{equation}
 
-where \(x\) represents the original feature value, \(\mu\) is the mean value, and \(\sigma\) is the standard deviation.
-
-\item \textbf{MinMaxScaler}
-
-\textit{MinMaxScaler} scales feature values into the range between 0 and 1 \cite{b27}. The normalization process is defined as follows:
+where $\mu$ and $\sigma$ represent the mean and standard deviation of each feature, respectively \cite{b26}. Meanwhile, \textit{MinMaxScaler} rescales feature values into the range of $[0,1]$ using
 
 \begin{equation}
-x' = \frac{x - x_{min}}{x_{max} - x_{min}}
+x'=\frac{x-x_{min}}{x_{max}-x_{min}},
 \end{equation}
 
-where \(x\) is the original value, \(x_{min}\) is the minimum feature value, and \(x_{max}\) is the maximum feature value.
-\end{itemize}
-
-The performance of each experiment was compared using classification evaluation metrics.
+where $x_{min}$ and $x_{max}$ denote the minimum and maximum values of each feature \cite{b27}. The performance of each experimental scenario was subsequently compared to determine the most effective normalization strategy for DNN-based dengue fever classification.
 
 \begin{table}[H]
 \caption{Normalization Experiment Configurations}
@@ -287,13 +164,13 @@ The performance of each experiment was compared using classification evaluation 
 \hline
 Exp-1 & Complete Dataset & None \\
 \hline
-Exp-2 & Complete Dataset & StandardScaler \\
+Exp-2 & Symptoms Dataset & None \\
 \hline
-Exp-3 & Complete Dataset & MinMaxScaler \\
+Exp-3 & Complete Dataset & StandardScaler \\
 \hline
-Exp-4 & Symptoms Dataset & None \\
+Exp-4 & Symptoms Dataset & StandardScaler \\
 \hline
-Exp-5 & Symptoms Dataset & StandardScaler \\
+Exp-5 & Complete Dataset & MinMaxScaler \\
 \hline
 Exp-6 & Symptoms Dataset & MinMaxScaler \\
 \hline
@@ -301,35 +178,34 @@ Exp-6 & Symptoms Dataset & MinMaxScaler \\
 \label{tab_norm}
 \end{table}
 
-% =====================================================
-% DEEP LEARNING MODEL
-% =====================================================
-
 \subsection{Proposed Deep Neural Network Model}
 
-Deep Neural Network (DNN) models are widely used for classification tasks because of their capability to learn complex non-linear relationships from structured data \cite{b28}. ReLU activation is commonly applied in hidden layers to improve computational efficiency and reduce the vanishing gradient problem \cite{b29}. Furthermore, dropout regularization is frequently used to minimize overfitting during the training process \cite{b30}. For binary classification problems, the Sigmoid activation function is generally used in the output layer to produce probability values between 0 and 1 \cite{b31}.
+A Deep Neural Network (DNN) was developed to classify dengue fever cases using clinical and laboratory data. The network architecture consists of an input layer, two fully connected hidden layers, two dropout layers, and a single-neuron output layer, as presented in Table~\ref{tab_model}. The number of input neurons depends on the selected dataset configuration. ReLU activation was applied in the hidden layers to introduce non-linearity, while dropout layers were incorporated to reduce the risk of overfitting during training. A Sigmoid activation function was used in the output layer to produce binary classification probabilities.
+
 \begin{table}[H]
-\caption{Proposed Deep Neural Network Architecture}
+\caption{Proposed DNN Architecture}
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Layer} & \textbf{Configuration} & \textbf{Activation} \\
 \hline
-Input Layer & Depends on dataset configuration & - \\
+Input Layer & Depends on dataset configuration & -- \\
 \hline
 Dense Layer 1 & 32 Neurons & ReLU \\
 \hline
-Dropout Layer 1 & Rate = 0.2 & - \\
+Dropout Layer 1 & Rate = 0.2 & -- \\
 \hline
 Dense Layer 2 & 16 Neurons & ReLU \\
 \hline
-Dropout Layer 2 & Rate = 0.1 & - \\
+Dropout Layer 2 & Rate = 0.1 & -- \\
 \hline
 Output Layer & 1 Neuron & Sigmoid \\
 \hline
 \end{tabular}
 \label{tab_model}
 \end{table}
+
+The model was trained using the Adam optimizer with the Binary Crossentropy loss function. Training was performed for a maximum of 50 epochs with a batch size of 32 and an initial learning rate of 0.001. Early stopping with a patience value of five epochs was applied to prevent unnecessary training once the validation performance no longer improved. The complete training configuration is summarized in Table~\ref{tab_hyper}.
 
 \begin{table}[H]
 \caption{Training Hyperparameters}
@@ -358,82 +234,30 @@ Decision Threshold & 0.4 \\
 \label{tab_hyper}
 \end{table}
 
-% =====================================================
-% CROSS VALIDATION
-% =====================================================
-
-% \subsection{Cross Validation}
-
-% Cross Validation was conducted to evaluate the stability and generalization capability of the proposed Deep Learning model. In this study, 5-Fold Cross Validation was implemented by dividing the dataset into five subsets. In each iteration, four subsets were used for training and one subset was used for validation.
-
-% This method helps reduce overfitting and provides more reliable evaluation results compared to a single train-test split approach \cite{b24}. The Cross Validation process was applied to all dataset configurations and normalization methods used in this study.
-
-% \begin{table}[H]
-% \caption{Cross Validation Configurations}
-% \centering
-% \begin{tabular}{|c|c|c|}
-% \hline
-% \textbf{Configuration} & \textbf{Dataset} & \textbf{Normalization} \\
-% \hline
-% CV-1 & Complete Dataset & None \\
-% \hline
-% CV-2 & Complete Dataset & StandardScaler \\
-% \hline
-% CV-3 & Complete Dataset & MinMaxScaler \\
-% \hline
-% CV-4 & Symptoms Dataset & None \\
-% \hline
-% CV-5 & Symptoms Dataset & StandardScaler \\
-% \hline
-% CV-6 & Symptoms Dataset & MinMaxScaler \\
-% \hline
-% \end{tabular}
-% \label{tab_cv_scenario}
-% \end{table}
-
-% The average accuracy and standard deviation obtained from the Cross Validation process were used to compare the performance consistency of each experimental configuration.
-
-% =====================================================
-% EVALUATION METRICS
-% =====================================================
+A decision threshold of 0.4 was adopted instead of the default value of 0.5 to increase the model's sensitivity in identifying positive dengue cases. From a clinical perspective, failing to detect an actual dengue patient may have more serious consequences than generating a false positive result, which can be confirmed through subsequent laboratory examinations. All experiments were implemented using TensorFlow 2.x on a workstation equipped with [hardware specification].
 
 \subsection{Evaluation Metrics}
 
-The proposed Deep Learning model was evaluated using Accuracy, Precision, Recall, F1-Score, and ROC-AUC metrics to measure classification performance and model reliability \cite{b34,b35}.
-
-\begin{itemize}
-
-\item \textbf{Accuracy}
+The performance of the proposed DNN model was evaluated using several widely adopted classification metrics, including Accuracy, Precision, Recall, F1-Score, and the Area Under the Receiver Operating Characteristic Curve (ROC-AUC) \cite{b34,b35}. Accuracy measures the overall proportion of correctly classified instances and is calculated as
 
 \begin{equation}
 Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
 \end{equation}
 
-\item \textbf{Precision}
+Precision and Recall were used to assess the model's ability to correctly identify positive dengue cases while minimizing false predictions, and are defined as
 
 \begin{equation}
-Precision = \frac{TP}{TP + FP}
-\end{equation}
-
-\item \textbf{Recall}
-
-\begin{equation}
+Precision = \frac{TP}{TP + FP}, \qquad
 Recall = \frac{TP}{TP + FN}
 \end{equation}
 
-\item \textbf{F1-Score}
+The F1-Score represents the harmonic mean of Precision and Recall, providing a balanced measure of classification performance, particularly when both false positives and false negatives are important.
 
 \begin{equation}
 F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}
 \end{equation}
 
-\item \textbf{ROC-AUC}
-
-ROC-AUC was used to evaluate the classification capability of the model across different threshold values.
-
-\end{itemize}
-
-Confusion Matrix analysis was also performed to compare classification results for each normalization method and dataset configuration.
+In these equations, \textit{True Positive} (TP) and \textit{True Negative} (TN) denote correctly classified dengue fever and non-dengue fever cases, respectively, whereas \textit{False Positive} (FP) and \textit{False Negative} (FN) represent incorrect classifications. In addition to these metrics, ROC-AUC was used to evaluate the model's discrimination capability across different decision thresholds. Confusion Matrix analysis was also performed to examine the distribution of correct and incorrect predictions and to compare the classification performance obtained from each normalization strategy and dataset configuration.
 
 % =====================================================
 % RESULTS 
@@ -441,36 +265,22 @@ Confusion Matrix analysis was also performed to compare classification results f
 
 \section{Results}
 
-This section presents the experimental results and analysis of the proposed Deep Learning model for Dengue Fever classification. The evaluation focuses on the influence of normalization methods and dataset configurations on classification performance.
-
-% =====================================================
-% TRAINING PERFORMANCE
-% =====================================================
-
 \subsection{Model Training Performance}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.48\textwidth]{training acc&loss.png}
+\includegraphics[width=0.46\textwidth]{training acc&loss.png}
 \caption{Training Accuracy and Loss}
 \label{fig_training}
 \end{figure}
 
-Fig.~\ref{fig_training} shows the training and validation performance of the proposed Deep Learning model. The accuracy graph indicates that both training and validation accuracy increased consistently during the training process and reached stable performance after several epochs. The model achieved validation accuracy above 97\%, indicating good classification capability.
+Fig.~\ref{fig_training} presents the learning curves of the proposed DNN model during the training process. Both the training and validation accuracy increased rapidly during the initial epochs before gradually converging to stable values. The validation accuracy reached approximately 97\%, while the training accuracy stabilized at around 95--96\%, indicating that the model successfully learned the underlying patterns in the dataset.
 
-Meanwhile, the loss graph demonstrates a gradual decrease in both training and validation loss values. This result indicates that the model successfully minimized classification errors and learned the dataset patterns effectively. In addition, the relatively small gap between training and validation performance suggests that the model achieved good generalization capability with minimal overfitting.
-
-% Discussion about convergence and model learning
-
-% =====================================================
-% NORMALIZATION EXPERIMENT RESULTS
-% =====================================================
+A similar trend can be observed in the loss curves, where both training and validation loss decreased consistently as training progressed. The validation loss remained slightly lower than the training loss throughout most epochs, which is likely attributable to the use of dropout regularization during training. Furthermore, the small gap between the training and validation curves suggests that the model generalized well to unseen data and exhibited no significant signs of overfitting.
 
 \subsection{Normalization Experiment Results}
 
-Normalization experiments were conducted to analyze the effect of feature scaling on the performance of the proposed Deep Neural Network (DNN) model. Six experimental scenarios were evaluated using two dataset configurations, namely the complete dataset and the symptoms-only dataset. Each dataset configuration was tested using three normalization methods: without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}. In addition, 5-Fold Cross Validation was applied in each experiment to obtain more stable and reliable evaluation results.
-
-Table~\ref{tab:normalization_comparison} presents an example comparison of feature values before and after applying normalization techniques. The results show that \textit{StandardScaler} transforms the data into a standardized distribution, while \textit{MinMaxScaler} scales feature values into a range between 0 and 1.
+Six experimental scenarios were conducted by combining two dataset configurations (complete and symptoms-only) with three normalization approaches: without normalization, \textit{StandardScaler}, and \textit{MinMaxScaler}. Table~\ref{tab:normalization_comparison} presents an example of how numerical feature values changed after each normalization method.
 
 \begin{table}[H]
 \centering
@@ -486,9 +296,9 @@ Age & Years & 26 & 0.03 & 0.33 \\
 \hline
 Temperature & $^\circ$C & 36.7 & -1.15 & 0.18 \\
 \hline
-Systolic Blood Pressure & mmHg & 100 & 0.05 & 0.40 \\
+Systolic BP & mmHg & 100 & 0.05 & 0.40 \\
 \hline
-Diastolic Blood Pressure & mmHg & 70 & 0.30 & 0.25 \\
+Diastolic BP & mmHg & 70 & 0.30 & 0.25 \\
 \hline
 Platelet & cells/$\mu$L & 139000 & -0.33 & 0.05 \\
 \hline
@@ -505,71 +315,63 @@ Fever Duration & Days & 5 & 1.43 & 0.71 \\
 \end{table}
 
 \begin{table}[H]
-\caption{Normalization Experiment and Cross Validation Results}
+\caption{Normalization Experiment Results}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
-\hline 
-\textbf{Experiment} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\ 
-\hline 
-Exp-1 & 60.87\% & 69.23\% & 39.13\% & 50.00\% \\ 
-\hline 
-\rowcolor{blue!15}
-\textbf{Exp-2} & \textbf{96.96\%} & \textbf{95.76\%} & \textbf{98.26\%} & \textbf{97.00\%} \\ 
 \hline
-Exp-3 & 95.22\% & 93.33\% & 97.39\% & 95.32\% \\ 
-\hline 
-Exp-4 & 55.22\% & 52.78\% & 99.13\% & 68.88\% \\ 
-\hline 
-Exp-5 & 93.04\% & 93.04\% & 93.04\% & 93.04\% \\ 
-\hline 
-Exp-6 & 93.04\% & 92.31\% & 93.91\% & 93.10\% \\ 
-\hline 
-\end{tabular} 
-\label{tab_experiment} 
+\textbf{Experiment} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+\hline
+Exp-1 & 60.87\% & 69.23\% & 39.13\% & 50.00\% \\
+\hline
+\rowcolor{blue!15}
+\textbf{Exp-2} & \textbf{96.96\%} & \textbf{95.76\%} & \textbf{98.26\%} & \textbf{97.00\%} \\
+\hline
+Exp-3 & 95.22\% & 93.33\% & 97.39\% & 95.32\% \\
+\hline
+Exp-4 & 55.22\% & 52.78\% & 99.13\% & 68.88\% \\
+\hline
+Exp-5 & 93.04\% & 93.04\% & 93.04\% & 93.04\% \\
+\hline
+Exp-6 & 93.04\% & 92.31\% & 93.91\% & 93.10\% \\
+\hline
+\end{tabular}
+\label{tab_experiment}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.48\textwidth]{normalization_comparison.png}
-\caption{Accuracy Comparison Across Different Normalization Methods}
+\includegraphics[width=0.46\textwidth]{normalization_comparison.png}
+\caption{Accuracy Comparison Across Experiments}
 \label{fig_norm_acc}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.48\textwidth]{cv_comparison.png}
-\caption{Cross Validation Accuracy Comparison}
-\label{fig_experiment}
-\end{figure}
+Table~\ref{tab_experiment} and Fig.~\ref{fig_norm_acc} demonstrate that feature normalization had a significant impact on model performance. The experiments without normalization (Exp-1 and Exp-4) produced the lowest accuracies, indicating that differences in feature scales hindered the learning process of the DNN model.
 
-Table~\ref{tab_experiment}, Fig.~\ref{fig_norm_acc}, and Fig.~\ref{fig_experiment} demonstrate that normalization significantly influenced the performance of the proposed DNN model for Dengue Fever classification. Experiments without normalization showed the lowest performance, particularly in Exp-1 and Exp-4, indicating that differences in feature scales negatively affected the learning process. In contrast, applying normalization methods substantially improved classification outcomes. Among all approaches, \textit{StandardScaler} achieved the best overall results in Exp-2, obtaining 96.96\% accuracy, 95.76\% precision, 98.26\% recall, and a 97.00\% F1-Score. Meanwhile, \textit{MinMaxScaler} also demonstrated competitive performance, especially in Exp-3, with an accuracy of 95.22\%.
+Among the evaluated methods, \textit{StandardScaler} achieved the highest performance on the complete dataset (Exp-2), obtaining an accuracy of 96.96\% and an F1-score of 97.00\%. \textit{MinMaxScaler} also produced competitive results, reaching 95.22\% accuracy in Exp-3. For the symptoms-only dataset, both normalization methods achieved consistent accuracies above 93\%, substantially outperforming the corresponding experiments without normalization.
 
-For the \textit{symptoms-only dataset}, both normalization methods maintained stable classification performance above 93\%, whereas experiments without normalization resulted in lower accuracy despite relatively high recall values. In addition, the \textit{complete dataset} consistently outperformed the \textit{symptoms-only dataset}, suggesting that laboratory examination features provided valuable clinical information for dengue classification. Overall, the findings indicate that normalization, particularly \textit{StandardScaler}, plays an important role in improving model convergence, training stability, and overall classification performance.
-
-% =====================================================
-% CONFUSION MATRIX AND ROC ANALYSIS
-% =====================================================
+Overall, the results indicate that applying feature normalization improves classification performance, with \textit{StandardScaler} providing the best overall results. In addition, the complete dataset consistently outperformed the symptoms-only dataset, suggesting that laboratory features provide valuable information for improving Dengue Fever classification.
 
 \subsection{Classification Evaluation}
-To further evaluate the classification capability of the proposed Deep Neural Network (DNN) model, Confusion Matrix and ROC Curve analyses were performed for each normalization method. These evaluations were conducted to analyze the model's ability to correctly classify positive and negative Dengue Fever cases as well as to measure overall classification performance.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.48\textwidth]{confusion_matrix.png}
+\includegraphics[width=0.46\textwidth]{confusion_matrix.png}
 \caption{Confusion Matrix Comparison for Different Normalization Methods}
 \label{fig_cm}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.48\textwidth]{ROC.png}
+\includegraphics[width=0.46\textwidth]{ROC.png}
 \caption{ROC Curve Comparison for Different Normalization Methods}
 \label{fig_roc}
 \end{figure}
 
-Fig.~\ref{fig_cm} and Fig.~\ref{fig_roc} present the classification performance comparison using Confusion Matrix and ROC Curve analysis for different normalization methods. The confusion matrix results show that experiments without normalization produced a higher number of misclassifications, particularly in detecting positive Dengue Fever cases. In contrast, both \textit{StandardScaler} and \textit{MinMaxScaler} significantly improved prediction accuracy by reducing false classifications. Among all methods, \textit{StandardScaler} achieved the best classification results with the highest number of correctly predicted samples.
+Figures~\ref{fig_cm} and~\ref{fig_roc} present the confusion matrices and ROC curves obtained from the three normalization approaches. The model trained without normalization produced the highest number of misclassified samples, particularly in identifying Dengue Fever cases, indicating that differences in feature scales negatively affected the learning process.
 
-Similarly, the ROC Curve analysis demonstrates that normalization substantially improved the classification capability of the proposed Deep Neural Network model. The model without normalization achieved a relatively low AUC value of 0.6060, while \textit{StandardScaler} and \textit{MinMaxScaler} achieved significantly higher AUC values of 0.9972 and 0.9920, respectively. These findings confirm that normalization plays an important role in improving model sensitivity, specificity, and overall classification performance for Dengue Fever prediction.
+In contrast, both \textit{StandardScaler} and \textit{MinMaxScaler} significantly improved classification performance by reducing false predictions and increasing the number of correctly classified samples. Among the three approaches, \textit{StandardScaler} achieved the best performance with an AUC of 0.9972, followed closely by \textit{MinMaxScaler} with an AUC of 0.9920. Meanwhile, the model without normalization obtained an AUC of only 0.6060, demonstrating considerably weaker discrimination capability.
+
+Overall, these results indicate that applying feature normalization substantially improves the effectiveness of the proposed DNN model. In particular, \textit{StandardScaler} provides the most reliable classification performance by producing the highest predictive accuracy and the strongest ability to distinguish between Dengue Fever and non-Dengue Fever cases.
 
 % =====================================================
 % DISCUSSION
@@ -577,13 +379,15 @@ Similarly, the ROC Curve analysis demonstrates that normalization substantially 
 
 \section{Discussion}
 
-The experimental results demonstrate that normalization significantly influenced the performance of the proposed Deep Neural Network (DNN) model for Dengue Fever classification. Among all normalization methods, \textit{StandardScaler} achieved the best overall performance in terms of accuracy, F1-Score, and ROC-AUC value. These findings indicate that feature scaling improves the stability of the training process and enables the model to learn feature patterns more effectively.
+The experimental results demonstrate that data normalization plays an important role in improving the performance of Deep Neural Network (DNN) models for Dengue Fever classification. Among the evaluated methods, \textit{StandardScaler} consistently produced the highest performance across all evaluation metrics. This result indicates that standardizing numerical features to zero mean and unit variance allows the DNN to learn more effectively from clinical data with different value ranges, particularly laboratory measurements such as platelet count, leukocyte count, hematocrit, and hemoglobin. In contrast, models trained without normalization produced substantially lower performance, confirming that differences in feature scales negatively affect the optimization process.
 
-The results also show that the complete dataset containing both symptom and laboratory examination features consistently outperformed the symptoms-only dataset. Laboratory attributes such as platelet count, leukocyte count, hematocrit, and hemoglobin contributed important clinical information that improved the classification capability of the model. Meanwhile, the symptoms-only dataset still achieved relatively high performance, indicating its potential for early screening and preliminary self-assessment before laboratory examination is conducted.
+The comparison between dataset configurations also highlights the importance of laboratory examination results. Models trained using the complete dataset consistently outperformed those using only symptom-based features. This finding suggests that laboratory indicators provide additional diagnostic information that complements clinical symptoms, leading to more accurate classification. Nevertheless, the symptoms-only configuration still achieved satisfactory performance above 93\%, demonstrating its potential for preliminary screening when laboratory results are not yet available.
 
-In addition, the implementation of 5-Fold Cross Validation demonstrated that the proposed model achieved stable and consistent performance across different experimental scenarios. The relatively small gap between training and validation performance indicates that the model generalized well and experienced minimal overfitting during the training process.
+The training and validation curves, together with the cross-validation results, indicate that the proposed DNN generalized well to unseen data. The small difference between training and validation performance suggests that the model learned representative patterns without experiencing significant overfitting.
 
-Overall, the proposed DNN-based classification framework shows strong potential for supporting intelligent healthcare systems for early Dengue Fever prediction. The experimental findings also confirm that proper normalization plays an important role in improving Deep Learning classification performance on clinical datasets with heterogeneous feature scales.
+\subsection{Limitations}
+
+This study has several limitations. First, the proposed DNN model was not compared with conventional machine learning algorithms such as Support Vector Machine (SVM), Random Forest, or XGBoost, limiting broader performance comparison. Second, the decision threshold of 0.4 was selected empirically to prioritize recall for clinical screening rather than through systematic threshold optimization. Finally, the dataset was obtained from a single data source with a relatively limited number of patient records. Therefore, further validation using larger and more diverse datasets from multiple healthcare institutions is required to evaluate the robustness and generalizability of the proposed framework.
 
 % =====================================================
 % CONCLUSION
@@ -591,39 +395,19 @@ Overall, the proposed DNN-based classification framework shows strong potential 
 
 \section{Conclusion}
 
-This study proposed a Deep Neural Network (DNN)-based classification framework for Dengue Fever prediction using clinical symptom and laboratory examination data. The study primarily focused on analyzing the impact of normalization methods on classification performance using different dataset configurations.
+This study investigated the effect of different normalization techniques on the performance of a Deep Neural Network for Dengue Fever classification using clinical symptoms and laboratory data. Experimental results showed that normalization significantly improved classification performance compared to using raw data. Among the evaluated approaches, \textit{StandardScaler} achieved the best overall performance, achieving the highest Accuracy, Precision, Recall, F1-Score, and ROC-AUC. Furthermore, models trained using the full dataset consistently outperformed models using only symptom-based features, indicating that laboratory measurements provide valuable information for disease classification.
 
-The experimental results demonstrate that normalization significantly improved the performance of the proposed model compared to experiments without normalization. Among all methods, \textit{StandardScaler} achieved the best overall performance with the highest accuracy, F1-Score, and ROC-AUC values. In addition, the complete dataset containing laboratory examination features consistently produced better classification results than the symptoms-only dataset.
-
-The implementation of 5-Fold Cross Validation also confirmed that the proposed model achieved stable and reliable performance with good generalization capability. Overall, the proposed framework shows promising potential for supporting early Dengue Fever prediction and healthcare decision support systems.
-
-% =====================================================
-% FUTURE WORK
-% =====================================================
+The use of nested 5-Fold Cross-Validation, followed by retraining the final model on the full training dataset, also demonstrated stable model performance and good generalization ability. These findings indicate that the proposed framework has strong potential to support early Dengue Fever screening and aid clinical decision-making.
 
 \section{Future Work}
 
-Future studies may improve the proposed framework by utilizing larger and more diverse clinical datasets collected from multiple healthcare institutions. Additional experiments using more advanced Deep Learning architectures such as CNN, LSTM, or hybrid models may also enhance classification performance. Furthermore, future research can focus on integrating the proposed model into real-time healthcare applications or web-based systems to support early Dengue Fever screening and clinical decision-making processes.
-
-% =====================================================
-% ACKNOWLEDGMENT
-% =====================================================
+Future research should evaluate the proposed framework using a larger, multi-center clinical dataset to further validate its robustness. Comparison with conventional machine learning algorithms and more sophisticated deep learning architectures would also provide a broader assessment of the model's performance. Furthermore, integrating the proposed model into a real-time, web-based clinical decision support system would facilitate its practical implementation in healthcare settings.
 
 \section*{Acknowledgment}
 
-The authors would like to express their sincere gratitude to all parties who contributed to this research, including academic supervisors, healthcare data providers, and supporting institutions. Their support, guidance, and valuable contributions greatly assisted the completion of this study.
-
-% =====================================================
-% REFERENCES
-% =====================================================
+The authors would like to express their sincere gratitude to all parties who contributed to this research, including academic supervisors, healthcare data providers, and supporting institutions.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references.bib}
-
-
-
-% =====================================================
-% END DOCUMENT
-% =====================================================
 
 \end{document}
