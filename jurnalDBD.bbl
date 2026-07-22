@@ -55,6 +55,9 @@ S.~Garcia \emph{et~al.}, ``Data preprocessing in data mining,'' in \emph{Intelli
 \bibitem{b11}
 R.~Kohavi, ``A study of cross-validation and bootstrap for accuracy estimation and model selection,'' \emph{International Joint Conference on Artificial Intelligence (IJCAI)}, pp. 1137--1143, 1995.
 
+\bibitem{b12}
+T.~Hastie, R.~Tibshirani, and J.~Friedman, \emph{The Elements of Statistical Learning}, 2nd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2009.
+
 \bibitem{b13}
 D.~C. Andrade~Girón, W.~J. Marín~Rodriguez, F.~d.~M. Lioo-Jordan, and J.~L. Ausejo~Sánchez, ``Machine learning and deep learning models for dengue diagnosis prediction: A systematic review,'' \emph{Informatics}, 2025.
 
